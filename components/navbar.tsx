@@ -4,15 +4,11 @@ import { styled, alpha } from '@mui/material/styles';
 
 import { AppBar, Box, Toolbar, IconButton, Typography, Container, Menu, Button, MenuItem, InputBase } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import ScienceRoundedIcon from '@mui/icons-material/ScienceRounded';
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
 
-/*
-
-*/
 function NavBar() {
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -43,43 +39,6 @@ function NavBar() {
                 'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
             '& .MuiMenu-list': {
                 padding: '4px 0',
-            },
-        },
-    }));
-
-
-    const Search = styled('div')(({ theme }) => ({
-        position: 'absolute',
-        display: 'flex',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
-        right: theme.spacing(1),
-        width: 'auto',
-    }));
-
-    const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }));
-
-    const StyledInputBase = styled(InputBase)(({ theme }) => ({
-        color: 'inherit',
-        '& .MuiInputBase-input': {
-            padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-            transition: theme.transitions.create('width'),
-            width: '12ch',
-            '&:focus': {
-                width: '20ch',
             },
         },
     }));
@@ -127,15 +86,6 @@ function NavBar() {
                                 Info
                             </Button>
                         </Box>
-                        <Search sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
-                            <SearchIconWrapper>
-                                <SearchIcon />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                inputProps={{ 'aria-label': 'search' }}
-                            />
-                        </Search>
 
                         <IconButton
                             size="large"
@@ -195,6 +145,13 @@ function NavBar() {
                                 Contact
                             </MenuItem>
                         </StyledMenu>
+                        <Button
+                            key='Login'
+                            href="#Login"
+                            sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2}}
+                        >
+                            Login
+                        </Button>
                     </Toolbar>
                 </Container>
             </AppBar>
