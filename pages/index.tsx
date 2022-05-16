@@ -37,13 +37,14 @@ const style: Style = {
     title_image_box: {
         border: "1px solid black",
         height: "100%"
-    }
+    },
 }
 
 // class for switch
 import Box from '@mui/material/Box';
 
 function UserDevSwitch() {
+
     const [active, setActive] = useState(false);
 
     const style_dvs: Style = {
@@ -62,7 +63,7 @@ function UserDevSwitch() {
             display: "inline-grid",
             gridTemplateColumns: "50% 50%",
         },
-        active: {
+        activeSwitch: {
             background: "#2a2e35",
             position: "absolute",
             top: 0,
@@ -92,7 +93,7 @@ function UserDevSwitch() {
                 }}
             >
                 <div style={style_dvs.toggle} onClick={() => toggle()}>
-                    <div style={style_dvs.active} />
+                    <div style={style_dvs.activeSwitch} />
                     <div style={style_dvs.button}>
                         <p style={style_dvs.text}> Users </p>
                         <p style={style_dvs.text}> Developer </p>
@@ -117,6 +118,24 @@ const Home: NextPage = () => {
                 </div>
             </div>
             <UserDevSwitch />
+            <div style={style.div_title}>
+                <div style={style.div_grid_title_left}>
+                    <p style={style.title_font}> Nickname </p>
+                    <p style={style.title_font}> Chose an username </p>
+                    <p style={style.title_font}> to use in all dApp </p>
+                    <p style={style.title_font}> created with LongLink </p>
+
+                </div>
+                <div style={style.div_grid_title_right}>
+                    <h1 style={style.title_image_box}> Qua ci va l'immagine </h1>
+                </div>
+                <div style={style.div_grid_title_right}>
+                    <p style={style.title_font}> Avatar </p>
+                    <p style={style.title_font}> Chose any NFT and </p>
+                    <p style={style.title_font}> set it as your Avatar </p>
+
+                </div>
+            </div>
         </>
     )
 }

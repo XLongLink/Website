@@ -8,7 +8,6 @@ npm run dev
 <br/>
 #### To Do list:
 - Navbar: (```/components/navbar/navbar.tsx```)
-    - Inserire bottone di login
     - Pulire il codice (ev aggiungere qualche commento)
 <br/>
 - Index: (```/pages/index.tsx```)
