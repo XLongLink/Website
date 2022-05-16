@@ -1,5 +1,5 @@
-import { maxWidth, padding } from '@mui/system';
 import type { NextPage } from 'next'
+import React, { useState } from 'react';
 import NavBar from '../components/navbar'
 
 interface Style {
@@ -17,7 +17,7 @@ const style: Style = {
     div_grid_title_left: {
         right: 0,
         paddingTop: 200,
-        paddingBottom: 200,
+        paddingBottom: 300,
     },
     div_grid_title_right: {
         paddingTop: 200,
@@ -40,6 +40,68 @@ const style: Style = {
     }
 }
 
+// class for switch
+import Box from '@mui/material/Box';
+
+function UserDevSwitch() {
+    const [active, setActive] = useState(false);
+
+    const style_dvs: Style = {
+        toggle: {
+            position: "relative",
+        },
+        button: {
+            background: "rgba(255, 255, 255, 0.9)",
+            backgroundColor: "#12181b",
+            borderRadius: 30,
+            width: 600,
+            textAlign: "center",
+            fontSize: 30,
+            color: "#FFF",
+            position: "relative",
+            display: "inline-grid",
+            gridTemplateColumns: "50% 50%",
+        },
+        active: {
+            background: "#2a2e35",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "50%",
+            height: "100%",
+            borderRadius: 30,
+            transform: active ? "translateX(0)" : "translateX(100%)",
+            transition: "transform 300ms",
+            zIndex: 1
+        },
+        text: {
+            zIndex: 2
+        }
+    }
+    const toggle = () => {
+        setActive(!active)
+    }
+
+    return (
+        <>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+            >
+                <div style={style_dvs.toggle} onClick={() => toggle()}>
+                    <div style={style_dvs.active} />
+                    <div style={style_dvs.button}>
+                        <p style={style_dvs.text}> Users </p>
+                        <p style={style_dvs.text}> Developer </p>
+                    </div>
+                </div>
+            </Box >
+        </>
+    )
+}
 const Home: NextPage = () => {
     return (
         <>
@@ -54,6 +116,7 @@ const Home: NextPage = () => {
                     <h1 style={style.title_image_box}> Qua ci va l'immagine </h1>
                 </div>
             </div>
+            <UserDevSwitch />
         </>
     )
 }

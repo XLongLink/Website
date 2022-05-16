@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { styled, alpha } from '@mui/material/styles';
 
@@ -10,6 +10,9 @@ import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import ScienceRoundedIcon from '@mui/icons-material/ScienceRounded';
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
 
+/*
+
+*/
 function NavBar() {
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
