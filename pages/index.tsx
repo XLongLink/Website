@@ -43,8 +43,7 @@ const style: Style = {
 // class for switch
 import Box from '@mui/material/Box';
 
-function UserDevSwitch() {
-
+function UserDevSwitch(onSwitch: any) {
     const [active, setActive] = useState(false);
 
     const style_dvs: Style = {
@@ -79,8 +78,10 @@ function UserDevSwitch() {
             zIndex: 2
         }
     }
+
     const toggle = () => {
         setActive(!active)
+        onSwitch(!active)
     }
 
     return (
@@ -104,6 +105,8 @@ function UserDevSwitch() {
     )
 }
 const Home: NextPage = () => {
+    const [activeSection, setActiveSection] = useState(false)
+
     return (
         <>
             <NavBar />
@@ -117,7 +120,16 @@ const Home: NextPage = () => {
                     <h1 style={style.title_image_box}> Qua ci va l'immagine </h1>
                 </div>
             </div>
-            <UserDevSwitch />
+            <UserDevSwitch onSwitch={(e: boolean) => {
+                setActiveSection(e)
+            }}/>
+            {activeSection ? 
+                <>
+  <h1> PRimo </h1>
+                </> : <>
+                    <h1>Secondo</h1>
+                </>
+            }
             <div style={style.div_title}>
                 <div style={style.div_grid_title_left}>
                     <p style={style.title_font}> Nickname </p>
