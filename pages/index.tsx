@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import React, { useState } from 'react';
-import NavBar from '../components/navbar'
+import React, { useState, useEffect } from 'react';
+import NavBar from '../components/navabar/navbar'
 
 interface Style {
     [key: string]: React.CSSProperties;
@@ -107,11 +107,34 @@ const style: Style = {
     },
 }
 
+import { useDispatch, useSelector } from "react-redux";
+import { UAParser } from "ua-parser-js";
+import Authenticate from "../components/connect/authenticate";
+import Connect from "../components/connect/connect";
+import { useGetDashboardQuery } from "../components/redux/nextApi";
+import { setIOS } from "../components/redux/walletSlice";
+
 const Home: NextPage = () => {
     const [activeSection, setActiveSection] = useState(false)
 
+    const { address: wallet } = useSelector((state: any) => state.wallet);
+    const { currentData, isFetching, error } = useGetDashboardQuery(wallet, { skip: !wallet });
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        const ClientUAInstance = new UAParser();
+        const os = ClientUAInstance.getOS();
+        let iOS = false;
+        if (os?.name === "Mac OS" || os?.name === "iOS") {
+            iOS = true;
+        }
+        dispatch(setIOS(iOS));
+    }, [dispatch]);
+
     return (
         <>
+            <Connect />
+            <Authenticate />
             <NavBar />
             <div style={style.div_title}>
                 <div style={style.div_grid_title_left}>

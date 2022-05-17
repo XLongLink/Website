@@ -1,5 +1,4 @@
 import React from "react";
-
 import { styled } from '@mui/material/styles';
 
 import { AppBar, Box, Toolbar, IconButton, Typography, Container, Menu, Button, MenuItem } from '@mui/material';
@@ -9,65 +8,7 @@ import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import ScienceRoundedIcon from '@mui/icons-material/ScienceRounded';
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
 
-/* 
-    Walletconnect 
-
-    Temporaneo, va spostato in un componente a parte
-    
-*/
-import WalletConnect from "@walletconnect/client";
-import QRCodeModal from "algorand-walletconnect-qrcode-modal";
-import WalletConnectQRCodeModal from "@walletconnect/qrcode-modal";
-import algosdk from "algosdk";
-import { formatJsonRpcRequest } from "@json-rpc-tools/utils";
-
-const creeateSession = () => {
-    const connector = new WalletConnect({
-        bridge: "https://bridge.walletconnect.org", // Required
-        qrcodeModal: WalletConnectQRCodeModal,
-    });
-
-    // Check if connection is already established
-    if (!connector.connected) {
-        console.log("here")
-        // create new session
-        connector.createSession();
-
-    }
-
-    WalletConnectQRCodeModal.open(connector.uri, () => {
-        console.log("logged")
-    })
-
-    // Subscribe to connection events
-    connector.on("connect", (error, payload) => {
-        if (error) {
-            throw error;
-        }
-
-        // Get provided accounts
-        const { accounts } = payload.params[0];
-    });
-
-    connector.on("session_update", (error, payload) => {
-        if (error) {
-            throw error;
-        }
-
-        // Get updated accounts 
-        const { accounts } = payload.params[0];
-    });
-
-    connector.on("disconnect", (error, payload) => {
-        if (error) {
-            throw error;
-        }
-    });
-}
-
-
 function NavBar() {
-
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -206,9 +147,6 @@ function NavBar() {
                             key='Login'
                             href="#Login"
                             sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2 }}
-                            onClick={() => {
-                                creeateSession()
-                            }}
                         >
                             Login
                         </Button>
