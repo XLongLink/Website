@@ -74,34 +74,69 @@ function UserDevSwitch(props: any) {
 
 /* Home page*/
 const style: Style = {
-    div_title: {
+    div: {
         position: "relative",
         display: "inline-grid",
         gridTemplateColumns: "50% 50%",
         width: "100%",
         height: "auto",
     },
-    div_grid_title_left: {
-        right: 0,
-        paddingTop: 200,
-        paddingBottom: 300,
+    div_grid_text_left: {
+        padding: 10, // Non fa niente
     },
-    div_grid_title_right: {
+    div_grid_text_right: {
+        marginTop: 200, // Non fa niente
+        marginBottom: 200,
+    },
+    div_grid_image_left: {
         paddingTop: 200,
         paddingBottom: 200,
         paddingLeft: 100,
         paddingRight: 100,
     },
-    title_font: {
+    div_grid_image_right: {
+        paddingTop: 200,
+        paddingBottom: 200,
+        paddingLeft: 100,
+        paddingRight: 100,
+    },
+    title_font_left: {
         fontFamily: '"Times New Roman", Times, serif',
         fontSize: 60,
         fontWeight: "bold",
         textAlign: "right",
+        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
         padding: 0,
         margin: 0,
-        textShadow: "0px 4px 7px rgba(81,67,21,0.8)"
     },
-    title_image_box: {
+    title_font_right: {
+        fontFamily: '"Times New Roman", Times, serif',
+        fontSize: 60,
+        fontWeight: "bold",
+        textAlign: "left",
+        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
+        padding: 0,
+        margin: 0,
+    },
+    text_font_left: {
+        fontFamily: '"Times New Roman", Times, serif',
+        fontSize: 60,
+        fontWeight: "normal",
+        textAlign: "right",
+        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
+        padding: 0,
+        margin: 0,
+    },
+    text_font_right: {
+        fontFamily: '"Times New Roman", Times, serif',
+        fontSize: 60,
+        fontWeight: "normal",
+        textAlign: "left",
+        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
+        padding: 0,
+        margin: 0,
+    },
+    image_box: {
         border: "1px solid black",
         height: "100%"
     },
@@ -136,14 +171,14 @@ const Home: NextPage = () => {
             <Connect />
             <Authenticate />
             <NavBar />
-            <div style={style.div_title}>
+            <div style={style.div}>
                 <div style={style.div_grid_title_left}>
-                    <p style={style.title_font}> LongLink synmplify</p>
-                    <p style={style.title_font}> development into</p>
-                    <p style={style.title_font}> Algorand ecosystem </p>
+                    <p style={style.title_font_left}> LongLink synmplify</p>
+                    <p style={style.title_font_left}> development into</p>
+                    <p style={style.title_font_left}> Algorand ecosystem </p>
                 </div>
-                <div style={style.div_grid_title_right}>
-                    <h1 style={style.title_image_box}> Qua ci va l'immagine </h1>
+                <div style={style.div_grid_image_right}>
+                    <h1 style={style.image_box}> Qua ci va l'immagine </h1>
                 </div>
             </div>
             <UserDevSwitch onSwitch={(e: boolean) => {
@@ -151,29 +186,32 @@ const Home: NextPage = () => {
             }} />
             {activeSection ?
                 <>
-                    <h1> PRimo </h1>
+                    <div style={style.div}>
+                        <div style={style.div_grid_title_left}>
+                            <p style={style.title_font_left}> Nickname </p>
+                            <p style={style.text_font_left}> Chose an username </p>
+                            <p style={style.text_font_left}> to use in all dApp </p>
+                            <p style={style.text_font_left}> created with LongLink </p>
+
+                        </div>
+                        <div style={style.div_grid_image_right}>
+                            <h1 style={style.image_box}> Qua ci va l'immagine </h1>
+                        </div>
+
+                        <div style={style.div_grid_image_left}>
+                            <h1 style={style.image_box}> Qua ci va l'immagine </h1>
+                        </div>
+                        <div style={style.div_grid_title_right}>
+                            <p style={style.title_font_right}> Avatar </p>
+                            <p style={style.text_font_right}> Chose any NFT and </p>
+                            <p style={style.text_font_right}> set it as your Avatar </p>
+                        </div>
+                    </div>
                 </> : <>
-                    <h1>Secondo</h1>
+                    <h1> Secondo</h1>
                 </>
             }
-            <div style={style.div_title}>
-                <div style={style.div_grid_title_left}>
-                    <p style={style.title_font}> Nickname </p>
-                    <p style={style.title_font}> Chose an username </p>
-                    <p style={style.title_font}> to use in all dApp </p>
-                    <p style={style.title_font}> created with LongLink </p>
-
-                </div>
-                <div style={style.div_grid_title_right}>
-                    <h1 style={style.title_image_box}> Qua ci va l'immagine </h1>
-                </div>
-                <div style={style.div_grid_title_right}>
-                    <p style={style.title_font}> Avatar </p>
-                    <p style={style.title_font}> Chose any NFT and </p>
-                    <p style={style.title_font}> set it as your Avatar </p>
-
-                </div>
-            </div>
+            
         </>
     )
 }
