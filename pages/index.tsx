@@ -6,44 +6,10 @@ interface Style {
     [key: string]: React.CSSProperties;
 }
 
-const style: Style = {
-    div_title: {
-        position: "relative",
-        display: "inline-grid",
-        gridTemplateColumns: "50% 50%",
-        width: "100%",
-        height: "auto",
-    },
-    div_grid_title_left: {
-        right: 0,
-        paddingTop: 200,
-        paddingBottom: 300,
-    },
-    div_grid_title_right: {
-        paddingTop: 200,
-        paddingBottom: 200,
-        paddingLeft: 100,
-        paddingRight: 100,
-    },
-    title_font: {
-        fontFamily: '"Times New Roman", Times, serif',
-        fontSize: 60,
-        fontWeight: "bold",
-        textAlign: "right",
-        padding: 0,
-        margin: 0,
-        textShadow: "0px 4px 7px rgba(81,67,21,0.8)"
-    },
-    title_image_box: {
-        border: "1px solid black",
-        height: "100%"
-    },
-}
-
-// class for switch
+// component for switch
 import Box from '@mui/material/Box';
 
-function UserDevSwitch(onSwitch: any) {
+function UserDevSwitch(props: any) {
     const [active, setActive] = useState(false);
 
     const style_dvs: Style = {
@@ -81,7 +47,7 @@ function UserDevSwitch(onSwitch: any) {
 
     const toggle = () => {
         setActive(!active)
-        onSwitch(!active)
+        props.onSwitch(!active)
     }
 
     return (
@@ -104,6 +70,43 @@ function UserDevSwitch(onSwitch: any) {
         </>
     )
 }
+
+
+/* Home page*/
+const style: Style = {
+    div_title: {
+        position: "relative",
+        display: "inline-grid",
+        gridTemplateColumns: "50% 50%",
+        width: "100%",
+        height: "auto",
+    },
+    div_grid_title_left: {
+        right: 0,
+        paddingTop: 200,
+        paddingBottom: 300,
+    },
+    div_grid_title_right: {
+        paddingTop: 200,
+        paddingBottom: 200,
+        paddingLeft: 100,
+        paddingRight: 100,
+    },
+    title_font: {
+        fontFamily: '"Times New Roman", Times, serif',
+        fontSize: 60,
+        fontWeight: "bold",
+        textAlign: "right",
+        padding: 0,
+        margin: 0,
+        textShadow: "0px 4px 7px rgba(81,67,21,0.8)"
+    },
+    title_image_box: {
+        border: "1px solid black",
+        height: "100%"
+    },
+}
+
 const Home: NextPage = () => {
     const [activeSection, setActiveSection] = useState(false)
 
@@ -122,10 +125,10 @@ const Home: NextPage = () => {
             </div>
             <UserDevSwitch onSwitch={(e: boolean) => {
                 setActiveSection(e)
-            }}/>
-            {activeSection ? 
+            }} />
+            {activeSection ?
                 <>
-  <h1> PRimo </h1>
+                    <h1> PRimo </h1>
                 </> : <>
                     <h1>Secondo</h1>
                 </>
