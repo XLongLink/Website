@@ -1,13 +1,70 @@
 import React from "react";
 
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-import { AppBar, Box, Toolbar, IconButton, Typography, Container, Menu, Button, MenuItem, InputBase } from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Container, Menu, Button, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import ScienceRoundedIcon from '@mui/icons-material/ScienceRounded';
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
+
+/* 
+    Walletconnect 
+
+    Temporaneo, va spostato in un componente a parte
+    
+*/
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "algorand-walletconnect-qrcode-modal";
+import WalletConnectQRCodeModal from "@walletconnect/qrcode-modal";
+import algosdk from "algosdk";
+import { formatJsonRpcRequest } from "@json-rpc-tools/utils";
+
+const creeateSession = () => {
+    const connector = new WalletConnect({
+        bridge: "https://bridge.walletconnect.org", // Required
+        qrcodeModal: WalletConnectQRCodeModal,
+    });
+
+    // Check if connection is already established
+    if (!connector.connected) {
+        console.log("here")
+        // create new session
+        connector.createSession();
+
+    }
+
+    WalletConnectQRCodeModal.open(connector.uri, () => {
+        console.log("logged")
+    })
+
+    // Subscribe to connection events
+    connector.on("connect", (error, payload) => {
+        if (error) {
+            throw error;
+        }
+
+        // Get provided accounts
+        const { accounts } = payload.params[0];
+    });
+
+    connector.on("session_update", (error, payload) => {
+        if (error) {
+            throw error;
+        }
+
+        // Get updated accounts 
+        const { accounts } = payload.params[0];
+    });
+
+    connector.on("disconnect", (error, payload) => {
+        if (error) {
+            throw error;
+        }
+    });
+}
+
 
 function NavBar() {
 
@@ -148,7 +205,10 @@ function NavBar() {
                         <Button
                             key='Login'
                             href="#Login"
-                            sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2}}
+                            sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2 }}
+                            onClick={() => {
+                                creeateSession()
+                            }}
                         >
                             Login
                         </Button>
