@@ -1,75 +1,9 @@
 import type { NextPage } from 'next'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import NavBar from '../components/navabar/navbar'
-
-interface Style {
-    [key: string]: React.CSSProperties;
-}
-
-// component for switch
-import Box from '@mui/material/Box';
-
-function UserDevSwitch(props: any) {
-    const [active, setActive] = useState(false);
-
-    const style_dvs: Style = {
-        toggle: {
-            position: "relative",
-        },
-        button: {
-            background: "rgba(255, 255, 255, 0.9)",
-            backgroundColor: "#12181b",
-            borderRadius: 30,
-            width: 600,
-            textAlign: "center",
-            fontSize: 30,
-            color: "#FFF",
-            position: "relative",
-            display: "inline-grid",
-            gridTemplateColumns: "50% 50%",
-        },
-        activeSwitch: {
-            background: "#2a2e35",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "50%",
-            height: "100%",
-            borderRadius: 30,
-            transform: active ? "translateX(0)" : "translateX(100%)",
-            transition: "transform 300ms",
-            zIndex: 1
-        },
-        text: {
-            zIndex: 2
-        }
-    }
-
-    const toggle = () => {
-        setActive(!active)
-        props.onSwitch(!active)
-    }
-
-    return (
-        <>
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                <div style={style_dvs.toggle} onClick={() => toggle()}>
-                    <div style={style_dvs.activeSwitch} />
-                    <div style={style_dvs.button}>
-                        <p style={style_dvs.text}> Users </p>
-                        <p style={style_dvs.text}> Developer </p>
-                    </div>
-                </div>
-            </Box >
-        </>
-    )
-}
+import { Style } from "../interfaces"
+import Switch from "../components/index/switch"
+import Title from "../components/index/title"
 
 
 /* Home page*/
@@ -145,7 +79,7 @@ const style: Style = {
 import { useDispatch, useSelector } from "react-redux";
 import { UAParser } from "ua-parser-js";
 import Authenticate from "../components/connect/authenticate";
-import Connect from "../components/connect/connect";
+import Connect from "../components/authenticate/connect";
 import { useGetDashboardQuery } from "../components/redux/nextApi";
 import { setIOS } from "../components/redux/walletSlice";
 
@@ -171,17 +105,12 @@ const Home: NextPage = () => {
             <Connect />
             <Authenticate />
             <NavBar />
-            <div style={style.div}>
-                <div style={style.div_grid_title_left}>
-                    <p style={style.title_font_left}> LongLink synmplify</p>
-                    <p style={style.title_font_left}> development into</p>
-                    <p style={style.title_font_left}> Algorand ecosystem </p>
-                </div>
-                <div style={style.div_grid_image_right}>
-                    <h1 style={style.image_box}> Qua ci va l'immagine </h1>
-                </div>
-            </div>
-            <UserDevSwitch onSwitch={(e: boolean) => {
+            <Title
+                line_1="LongLink expand"
+                line_2="the full"
+                line_3="Algorand power"
+            />
+            <Switch onSwitch={(e: boolean) => {
                 setActiveSection(e)
             }} />
             {activeSection ?
@@ -211,7 +140,7 @@ const Home: NextPage = () => {
                     <h1> Secondo</h1>
                 </>
             }
-            
+
         </>
     )
 }
