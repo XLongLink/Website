@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
-import { replaceAuthToken } from "./walletSlice";
+import { replaceAuthToken } from "./walletSlice.ts";
 
 const baseUrl = "/api";
 
@@ -7,7 +7,7 @@ const staggeredBaseQuery = retry(
     async (args, { dispatch, getState }, extraOptions) => {
         const result = await fetchBaseQuery({
             baseUrl,
-            prepareHeaders: (headers, { getState }) => {
+            prepareHeaders: (headers, { _getState }) => {
                 const token = getState().wallet.authToken;
                 if (token) {
                     headers.set("authorization", `Bearer ${token}`);

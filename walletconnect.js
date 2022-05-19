@@ -5,5 +5,3 @@ export const connector = new WalletConnect({
     bridge: "https://bridge.walletconnect.org",
     qrcodeModal: QRCodeModal,
 });
-
-

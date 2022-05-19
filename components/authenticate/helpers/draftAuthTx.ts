@@ -1,10 +1,11 @@
-import { formatJsonRpcRequest } from "@json-rpc-tools/utils";
 import algosdk from "algosdk";
-import { connector } from "../../walletConnect";
+import { formatJsonRpcRequest } from "@json-rpc-tools/utils";
+import { connector } from "../../../walletConnect";
 
-const day1 = 86400000;
+export const day1 = 86400000;
 
-async function draftAuthTx({ wallet }: any) {
+async function draftAuthTx(wallet: string) {
+    console.log("called")
     const enc = new TextEncoder();
     const notePlainText = `https://stateless-auth.vercel.app/ ${Date.now() + day1}`; // <-- Capire cosa fa
     const note = enc.encode(notePlainText);
@@ -20,7 +21,7 @@ async function draftAuthTx({ wallet }: any) {
             lastRound: 10,
         },
         from: wallet,
-        to: wallet,
+        to: "HZ57J3K46JIJXILONBBZOHX6BKPXEM2VVXNRFSUED6DKFD5ZD24PMJ3MVA",
         amount: 0,
         note,
     });
