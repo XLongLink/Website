@@ -4,76 +4,11 @@ import NavBar from '../components/navabar/navbar'
 import { Style } from "../interfaces"
 import Switch from "../components/index/switch"
 import Title from "../components/index/title"
+import TextBox from "../components/index/textBox"
 
 
 /* Home page*/
 const style: Style = {
-    div: {
-        position: "relative",
-        display: "inline-grid",
-        gridTemplateColumns: "50% 50%",
-        width: "100%",
-        height: "auto",
-    },
-    div_grid_text_left: {
-        padding: 10, // Non fa niente
-    },
-    div_grid_text_right: {
-        marginTop: 200, // Non fa niente
-        marginBottom: 200,
-    },
-    div_grid_image_left: {
-        paddingTop: 200,
-        paddingBottom: 200,
-        paddingLeft: 100,
-        paddingRight: 100,
-    },
-    div_grid_image_right: {
-        paddingTop: 200,
-        paddingBottom: 200,
-        paddingLeft: 100,
-        paddingRight: 100,
-    },
-    title_font_left: {
-        fontFamily: '"Times New Roman", Times, serif',
-        fontSize: 60,
-        fontWeight: "bold",
-        textAlign: "right",
-        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
-        padding: 0,
-        margin: 0,
-    },
-    title_font_right: {
-        fontFamily: '"Times New Roman", Times, serif',
-        fontSize: 60,
-        fontWeight: "bold",
-        textAlign: "left",
-        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
-        padding: 0,
-        margin: 0,
-    },
-    text_font_left: {
-        fontFamily: '"Times New Roman", Times, serif',
-        fontSize: 60,
-        fontWeight: "normal",
-        textAlign: "right",
-        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
-        padding: 0,
-        margin: 0,
-    },
-    text_font_right: {
-        fontFamily: '"Times New Roman", Times, serif',
-        fontSize: 60,
-        fontWeight: "normal",
-        textAlign: "left",
-        textShadow: "0px 4px 7px rgba(81,67,21,0.8)",
-        padding: 0,
-        margin: 0,
-    },
-    image_box: {
-        border: "1px solid black",
-        height: "100%"
-    },
 }
 
 import { useDispatch, useSelector } from "react-redux";
@@ -115,9 +50,53 @@ const Home: NextPage = () => {
             }} />
             {activeSection ?
                 <>
-                    <h1> Primo</h1>
+                    <TextBox
+                        title = "Nickname"
+                        line_1 = "Chose an username"
+                        line_2 = "to use in all dApp"
+                        line_3 = "created with LongLink"
+                    />
+                    <TextBox
+                        right = {true}
+                        title = "Avatar"
+                        line_1 = "Coose any NFT and"
+                        line_2 = "set it as your Avatar"
+                    />
+                    <TextBox
+                        title = "Full data controll"
+                        line_1 = "Manage all the data"
+                        line_2 = "of different dApp"
+                        line_3 = "from a single console"
+                        line_4 = "+ Statistics"
+                    />
                 </> : <>
-                    <h1> Secondo</h1>
+                    <TextBox 
+                        title = "User Authentication"
+                        line_1 = "Authenticate an user"
+                        line_2 = "with a single line"
+                        line_3 = "of code"
+                    />
+                    <TextBox 
+                        right = {true}
+                        title = "variable Storage"
+                        line_1 = "We offer a small"
+                        line_2 = "database to store"
+                        line_3 = "users variables"
+                        line_4 = ""
+                    />
+                    <TextBox 
+                        title = "Frontend - Backend"
+                        line_1 = "Easy sdk offer the ability"
+                        line_2 = "to controll users in the"
+                        line_3 = "frontend and backend"
+                    />
+                    <TextBox 
+                        right = {true}
+                        line_1 = "Access to user data with"
+                        line_2 = "a single line of code, get"
+                        line_3 = "NFT, token, avatar, name,"
+                        line_4 = ". . ."
+                    />
                 </>
             }
 
