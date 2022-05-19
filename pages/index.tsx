@@ -17,6 +17,7 @@ import Authenticate from "../components/connect/authenticate";
 import Connect from "../components/authenticate/connect";
 import { useGetDashboardQuery } from "../components/redux/nextApi";
 import { setIOS } from "../components/redux/walletSlice";
+import Footbar from '../components/footbar/footbar'
 
 const Home: NextPage = () => {
     const [activeSection, setActiveSection] = useState(false)
@@ -103,7 +104,7 @@ const Home: NextPage = () => {
                     />
                 </>
             }
-
+            <Footbar/>
         </>
     )
 }

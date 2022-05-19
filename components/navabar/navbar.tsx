@@ -43,7 +43,7 @@ function NavBar() {
 
     return (
         <>
-            <AppBar position="static" style={{ background: '#1C1C1C' }}>
+            <AppBar position="sticky" style={{ background: '#1C1C1C'}}>
                 <Container maxWidth="xl">
                     <Toolbar>
                         <Typography
@@ -64,7 +64,7 @@ function NavBar() {
                             </Button>
                             <Button
                                 key='About'
-                                href="/about"
+                                href="#about"
                                 sx={{ my: 2, color: 'white', display: 'flex' }}
                             >
                                 News
