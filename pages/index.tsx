@@ -115,27 +115,7 @@ const Home: NextPage = () => {
             }} />
             {activeSection ?
                 <>
-                    <div style={style.div}>
-                        <div style={style.div_grid_title_left}>
-                            <p style={style.title_font_left}> Nickname </p>
-                            <p style={style.text_font_left}> Chose an username </p>
-                            <p style={style.text_font_left}> to use in all dApp </p>
-                            <p style={style.text_font_left}> created with LongLink </p>
-
-                        </div>
-                        <div style={style.div_grid_image_right}>
-                            <h1 style={style.image_box}> Qua ci va l'immagine </h1>
-                        </div>
-
-                        <div style={style.div_grid_image_left}>
-                            <h1 style={style.image_box}> Qua ci va l'immagine </h1>
-                        </div>
-                        <div style={style.div_grid_title_right}>
-                            <p style={style.title_font_right}> Avatar </p>
-                            <p style={style.text_font_right}> Chose any NFT and </p>
-                            <p style={style.text_font_right}> set it as your Avatar </p>
-                        </div>
-                    </div>
+                    <h1> Primo</h1>
                 </> : <>
                     <h1> Secondo</h1>
                 </>
