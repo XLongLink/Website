@@ -4,7 +4,7 @@ import NavBar from '../components/navabar/navbar'
 import { Style } from "../interfaces"
 import Switch from "../components/index/switch"
 import Title from "../components/index/title"
-import TextBox from "../components/index/textBox"
+import Features from "../components/index/features"
 
 
 /* Home page*/
@@ -50,19 +50,21 @@ const Home: NextPage = () => {
             }} />
             {activeSection ?
                 <>
-                    <TextBox
+                    <Features
+                        side = "left"
                         title = "Nickname"
                         line_1 = "Chose an username"
                         line_2 = "to use in all dApp"
                         line_3 = "created with LongLink"
                     />
-                    <TextBox
-                        right = {true}
+                    <Features
+                        side = "right"
                         title = "Avatar"
                         line_1 = "Coose any NFT and"
                         line_2 = "set it as your Avatar"
                     />
-                    <TextBox
+                    <Features
+                        side = "left"
                         title = "Full data controll"
                         line_1 = "Manage all the data"
                         line_2 = "of different dApp"
@@ -70,28 +72,30 @@ const Home: NextPage = () => {
                         line_4 = "+ Statistics"
                     />
                 </> : <>
-                    <TextBox 
+                    <Features 
+                        side = "left"
                         title = "User Authentication"
                         line_1 = "Authenticate an user"
                         line_2 = "with a single line"
                         line_3 = "of code"
                     />
-                    <TextBox 
-                        right = {true}
+                    <Features
+                        side = "right"
                         title = "variable Storage"
                         line_1 = "We offer a small"
                         line_2 = "database to store"
                         line_3 = "users variables"
                         line_4 = ""
                     />
-                    <TextBox 
+                    <Features 
+                        side = "left"
                         title = "Frontend - Backend"
                         line_1 = "Easy sdk offer the ability"
                         line_2 = "to controll users in the"
                         line_3 = "frontend and backend"
                     />
-                    <TextBox 
-                        right = {true}
+                    <Features 
+                        side = "right"
                         line_1 = "Access to user data with"
                         line_2 = "a single line of code, get"
                         line_3 = "NFT, token, avatar, name,"

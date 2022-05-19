@@ -11,7 +11,7 @@ npm run dev
 
 #### To Do list:
 - Index: (```/pages/index.tsx```)
-    - Completare parte user/developer come da imagini
+    - Completare parte user/developer come da imagini 
     - Spostare style in sezione a parte (fatto)
 
 - Footbar: (```/components/footbar/footbar.tsx```)
@@ -23,8 +23,8 @@ npm run dev
 
 - Adri:
     - I componenti metitli sotto una sezione loro (```/components/index/features.tsx```)
-    la parte di css va messa in un file a parte  (```./features.module.css```), va un po modificata, vedi esempio da altri componenti
-    - Fai in modo che è possibile schegliere l'orientamento passando il props "side" che ha valori "left" o "right"
+    la parte di css va messa in un file a parte  (```./features.module.css```), va un po modificata, vedi esempio da altri componenti (fatto)
+    - Fai in modo che è possibile scegliere l'orientamento passando il props "side" che ha valori "left" o "right" (fatto)
 
 
 - Ordinare codice autenticazione
