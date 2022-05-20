@@ -5,7 +5,6 @@ import { connector } from "../../../walletConnect";
 export const day1 = 86400000;
 
 async function draftAuthTx(wallet: string) {
-    console.log("called")
     const enc = new TextEncoder();
     const notePlainText = `https://stateless-auth.vercel.app/ ${Date.now() + day1}`; // <-- Capire cosa fa
     const note = enc.encode(notePlainText);

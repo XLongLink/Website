@@ -9,11 +9,14 @@ import Button from '@mui/material/Button';
 /* 
     Walletconnect login button, show popup
 
-    Has to be fixed the position, put in the navbar
+    ! Algo pera wallet has a bug, made a bug report here
+    https://github.com/perawallet/pera-wallet/issues/77
+
+    has to be added che possibility to click outside the walletconnect popup to exit
 
 */
 
-const Connect = () => {
+const Connect = (props: any) => {
     const { address: wallet } = useSelector((state: any) => state.wallet);
     const dispatch = useDispatch();
 
@@ -49,16 +52,20 @@ const Connect = () => {
         <>
             {!wallet ? (
                 <Button
-                    variant="contained"
-                    onClick={connectToMobileWallet} >
+                    variant="text"
+                    onClick={connectToMobileWallet}
+                    {...props}
+                >
                     Login
                 </Button >
             ) : (
                 <Button
-                    variant="contained"
-                    onClick={disconnectMobileWallet}>
+                    variant="text"
+                    onClick={disconnectMobileWallet}
+                    {...props}>
                     Logout
-                </Button>)}
+                </Button>)
+            }
         </>
 
     )

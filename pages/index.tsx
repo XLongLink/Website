@@ -1,18 +1,11 @@
 import type { NextPage } from 'next'
 import React, { useState } from 'react'
 import NavBar from '../components/navabar/navbar'
-import { Style } from "../interfaces"
 import Switch from "../components/index/switch"
 import Title from "../components/index/title"
 import Features from "../components/index/features"
-
-
-/* Home page*/
-const style: Style = {
-}
-
-import Connect from "../components/authenticate/connect";
 import Footbar from '../components/footbar/footbar'
+
 
 
 const Home: NextPage = () => {
@@ -20,7 +13,6 @@ const Home: NextPage = () => {
 
     return (
         <>
-            <Connect />
             <NavBar />
             <Title
                 line_1="LongLink expand"

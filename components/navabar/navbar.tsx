@@ -7,10 +7,12 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import ScienceRoundedIcon from '@mui/icons-material/ScienceRounded';
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
+import Connect from "../authenticate/connect";
 
 function NavBar() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
+
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
@@ -43,7 +45,7 @@ function NavBar() {
 
     return (
         <>
-            <AppBar position="sticky" style={{ background: '#1C1C1C'}}>
+            <AppBar position="sticky" style={{ background: '#1C1C1C' }}>
                 <Container maxWidth="xl">
                     <Toolbar>
                         <Typography
@@ -143,13 +145,10 @@ function NavBar() {
                                 Contact
                             </MenuItem>
                         </StyledMenu>
-                        <Button
+                        <Connect
                             key='Login'
                             href="#Login"
-                            sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2 }}
-                        >
-                            Login
-                        </Button>
+                            sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2 }} />
                     </Toolbar>
                 </Container>
             </AppBar>
