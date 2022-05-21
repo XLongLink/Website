@@ -1,7 +1,7 @@
 ## Website di LongLink
 For dependencies
 ```bash
-npm installl
+npm install
 ```
 
 To develop [http://localhost:3000](http://localhost:3000) 
