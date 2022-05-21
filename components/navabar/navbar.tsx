@@ -147,7 +147,6 @@ function NavBar() {
                         </StyledMenu>
                         <Connect
                             key='Login'
-                            href="#Login"
                             sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2 }} />
                     </Toolbar>
                 </Container>

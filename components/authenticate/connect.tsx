@@ -30,8 +30,8 @@ const Connect = (props: any) => {
     const { address: wallet } = useSelector((state: any) => state.wallet);
     const dispatch = useDispatch();
 
-    // handle close on escape
     useEffect(() => {
+        // handle close on escape
         if (document == undefined) return
         const escFunction = (event: any) => {
             if (event.keyCode === 27) QRCodeModal.close();
@@ -134,7 +134,10 @@ const Connect = (props: any) => {
                     </ListItemIcon>
                     Profile
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    component="a"
+                    href='/dashboard'
+                >
                     <ListItemIcon>
                         <DashboardIcon />
                     </ListItemIcon>
