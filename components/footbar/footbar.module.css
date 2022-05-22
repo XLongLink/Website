@@ -3,3 +3,8 @@
     bottom: 0;
     background: #1e1e1e;
 }
+
+.left {
+    display: flex;
+    flex-grow: 1;
+}
