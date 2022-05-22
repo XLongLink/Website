@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                     />
                     <Features
                         side="right"
-                        title="variable Storage"
+                        title="Variable Storage"
                         line_1="We offer a small"
                         line_2="database to store"
                         line_3="users variables"
