@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { connector } from "../../../walletConnect";
 import { nextApi } from "./nextApi";
 import { replaceAddress, replaceAuthToken } from "./walletSlice";

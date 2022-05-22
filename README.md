@@ -28,3 +28,13 @@ npm run dev
 
 - Ordinare codice autenticazione
 
+#### Auth token
+
+Import `Storage` from `customHooks/useStorage` then:
+
+```js
+const { token, setToken } = useContext(Storage);
+```
+
+token can be used like state
+setToken set the token in localstorage("authToken")
