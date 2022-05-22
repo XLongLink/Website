@@ -123,6 +123,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://discord.gg/cePXZtT8tz"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <DiscordIcon/>
                     </IconButton>
@@ -133,6 +135,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://www.facebook.com/profile.php?id=100081241820430"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <FacebookIcon/>
                     </IconButton>
@@ -143,6 +147,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://github.com/XLongLink"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <GitHubIcon/>
                     </IconButton>
@@ -153,6 +159,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://www.instagram.com/xlonglink/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <InstagramIcon/>
                     </IconButton>
@@ -163,6 +171,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://www.linkedin.com/company/longlink/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <LinkedinIcon/>
                     </IconButton>
@@ -173,6 +183,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <TelegramIcon/>
                     </IconButton>    */}
@@ -183,6 +195,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://twitter.com/xLongLink"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <TwitterIcon/> 
                     </IconButton>
@@ -193,6 +207,8 @@ function Footbar() {
                         aria-label="discord"
                         style={{ position: 'relative', right: 2 }}
                         href="https://www.youtube.com/channel/UCJaljchO8u1iU9ILlij7wsg/featured"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <YoutubeIcon/>
                     </IconButton>
