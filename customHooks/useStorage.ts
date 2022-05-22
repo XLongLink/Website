@@ -1,6 +1,5 @@
 import { useState, useEffect, createContext } from "react"
 
-
 /*
     has to ping api with token to check that is stil valid 
 */
