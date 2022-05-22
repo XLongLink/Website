@@ -1,24 +1,13 @@
 import { connector } from "../../../walletConnect";
 import { nextApi } from "./nextApi";
 import { replaceAddress, replaceAuthToken } from "./walletSlice";
-import draftAuthTx from "../helpers/draftAuthTx";
 
 export const walletListeners = ({ dispatch }: any) => {
     connector.on("connect", async (error, payload) => {
         if (error) console.log(error);
         try {
-            const token = localStorage.getItem("authToken");
-            if (token) return
             const load = payload.params[0];
             dispatch(replaceAddress(load.accounts[0]));
-            setTimeout(async () => {
-                await draftAuthTx(load.accounts[0]).then((t) => {
-                    dispatch(replaceAuthToken(t));
-                    localStorage.setItem("authToken", t);
-                    console.log(t)
-                })
-            }, 5000)
-
         } catch (e) {
             console.error(e);
         }
@@ -39,4 +28,9 @@ export const walletListeners = ({ dispatch }: any) => {
     });
 
     return (next: any) => (action: any) => next(action);
+};
+
+export const disconnectMobileWallet = async () => {
+    if (!connector.connected) return;
+    await connector.killSession();
 };

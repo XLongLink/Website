@@ -1,6 +1,9 @@
 import * as nobleEd25519 from "@noble/ed25519";
 import algosdk from "algosdk";
-import { day1, minutes30 } from "../constants/milliseconds";
+
+export const day1 = 86400000;
+export const day2 = day1 * 2;
+export const minutes30 = 1800000;
 
 const authMidddleware = async (wallet, token) => {
     //converting the base64 encoded tx back to binary data

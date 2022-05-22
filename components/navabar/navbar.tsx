@@ -106,7 +106,7 @@ function NavBar() {
                             MenuListProps={{
                                 'aria-labelledby': 'basic-button',
                             }}
-                            sx={{ color: 'primary.main' }}
+                            sx={{ color: 'primary.main', flexGrow: 1 }}
                         >
                             <MenuItem
                                 component='a'
@@ -145,9 +145,9 @@ function NavBar() {
                                 Contact
                             </MenuItem>
                         </StyledMenu>
-                        <Connect
-                            key='Login'
-                            sx={{ color: 'white', display: 'flex', ml: 'auto', mr: 2 }} />
+                        <div style={{ right: 0, position: "absolute" }}>
+                            <Connect />
+                        </div>
                     </Toolbar>
                 </Container>
             </AppBar>

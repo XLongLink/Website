@@ -11,7 +11,6 @@ npm run dev
 
 #### To Do list:
 - Index: (```/pages/index.tsx```)
-    - Completare parte user/developer come da imagini 
     - Spostare style in sezione a parte (fatto)
 
 - Footbar: (```/components/footbar/footbar.tsx```)
