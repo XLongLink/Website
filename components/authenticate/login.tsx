@@ -4,6 +4,7 @@ import QRCodeModal from "algorand-walletconnect-qrcode-modal";
 import { connector } from "../../walletConnect";
 import { replaceAddress } from "./redux/walletSlice";
 
+
 //mui
 import Button from '@mui/material/Button';
 

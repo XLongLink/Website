@@ -20,28 +20,28 @@ function NavBar() {
         setAnchorEl(null);
     };
 
-    const StyledMenu = styled((props: any) => (
-        <Menu
-            elevation={0}
-            anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'right',
-            }}
-            {...props}
-        />
-    ))(({ theme }) => ({
-        '& .MuiPaper-root': {
-            borderRadius: 6,
-            marginTop: theme.spacing(1),
-            minWidth: 180,
-            backgroundColor: '#1C1C1C',
-            boxShadow:
-                'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-            '& .MuiMenu-list': {
-                padding: '4px 0',
-            },
-        },
-    }));
+    // const StyledMenu = styled((props: any) => (
+    //     <Menu
+    //         elevation={0}
+    //         anchorOrigin={{
+    //             vertical: 'bottom',
+    //             horizontal: 'right',
+    //         }}
+    //         {...props}
+    //     />
+    // ))(({ theme }) => ({
+    //     '& .MuiPaper-root': {
+    //         borderRadius: 6,
+    //         marginTop: theme.spacing(1),
+    //         minWidth: 180,
+    //         backgroundColor: '#1C1C1C',
+    //         boxShadow:
+    //             'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+    //         '& .MuiMenu-list': {
+    //             padding: '4px 0',
+    //         },
+    //     },
+    // }));
 
     return (
         <>
@@ -98,7 +98,7 @@ function NavBar() {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <StyledMenu
+                        {/* <StyledMenu
                             id="basic-menu"
                             anchorEl={anchorEl}
                             open={open}
@@ -144,7 +144,7 @@ function NavBar() {
                                 <PhoneRoundedIcon sx={{ mr: 2 }} />
                                 Contact
                             </MenuItem>
-                        </StyledMenu>
+                        </StyledMenu> */}
                         <div style={{ right: 0, position: "absolute" }}>
                             <Connect />
                         </div>
