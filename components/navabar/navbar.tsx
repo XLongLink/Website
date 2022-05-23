@@ -45,18 +45,18 @@ function NavBar() {
 
     return (
         <>
-            <AppBar position="sticky" style={{ background: '#1C1C1C' }}>
+            <AppBar position="relative" style={{ background: '#1C1C1C' }}>
                 <Container maxWidth="xl">
                     <Toolbar>
                         <Typography
                             variant="h6"
                             noWrap
                             component="div"
-                            sx={{ mr: 10, display: "flex" }}
+                            sx={{ mr: 2, display: "flex" }}
                         >
                             LongLink
                         </Typography>
-                        <Box sx={{ my: 2, display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
+                        <Box sx={{display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
                             <Button
                                 key='Home'
                                 href="/"
