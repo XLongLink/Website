@@ -20,7 +20,7 @@ async function draftAuthTx(wallet: string) {
             lastRound: 10,
         },
         from: wallet,
-        to: "HZ57J3K46JIJXILONBBZOHX6BKPXEM2VVXNRFSUED6DKFD5ZD24PMJ3MVA",
+        to: wallet,
         amount: 0,
         note,
     });
