@@ -7,7 +7,14 @@ const Dashboard: NextPage = () => {
     return (
         <>
             <BodyStyle background="white" />
-            <Example></Example>
+            <Example
+                title="pollo arrosto"
+                subtitle="tutte le ore"
+            />
+            <Example
+                title="capone arrosto"
+                subtitle="solo alle 7"
+            />
         </>
     )
 }
