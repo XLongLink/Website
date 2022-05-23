@@ -6,8 +6,6 @@ import Title from "../components/index/title"
 import Features from "../components/index/features"
 import Footbar from '../components/footbar/footbar'
 
-
-
 const Home: NextPage = () => {
     const [activeSection, setActiveSection] = useState(false)
 
