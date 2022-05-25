@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 
-const Dashboard: About = () => {
+const About: NextPage = () => {
     return (
         <>
         </>
