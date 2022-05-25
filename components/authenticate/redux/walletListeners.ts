@@ -3,6 +3,7 @@ import { connector } from "../../../walletConnect";
 import { nextApi } from "./nextApi";
 import { replaceAddress, replaceAuthToken } from "./walletSlice";
 
+
 export const walletListeners = ({ dispatch }: any) => {
     connector.on("connect", async (error, payload) => {
         if (error) console.log(error);
