@@ -80,7 +80,7 @@ function NavBar() {
                             </Button>
                             <Button
                                 key='Contact'
-                                href="#Contact"
+                                href="/about"
                                 sx={{ my: 2, color: 'white', display: 'flex' }}
                             >
                                 Info
