@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import NavBar from '../components/navabar/navbar'
 import Footbar from '../components/footbar/footbar'
-import Collaborators from '../components/about/collaborators'
+import Collaborator from '../components/about/collaborator'
 import { Typography } from '@mui/material';
 
 const About: NextPage = () => {
+
     return (
         <>
             <NavBar />
@@ -14,7 +15,10 @@ const About: NextPage = () => {
             >
                 Descrizione di chi siamo
             </Typography>
-            <Collaborators/>
+            <div>
+                <Collaborator/>
+
+            </div>
             <Footbar/>
         </>        
         

@@ -1,0 +1,15 @@
+.div {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.image{
+    height: auto;
+    border: 1px solid black;
+}
+
+.description {
+    height: auto;
+    text-align: center;
+    border: 1px solid red;
+}
