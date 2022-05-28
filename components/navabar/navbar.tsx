@@ -56,7 +56,7 @@ function NavBar() {
                         >
                             LongLink
                         </Typography>
-                        <Box sx={{display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
+                        <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
                             <Button
                                 key='Home'
                                 href="/"
@@ -65,15 +65,15 @@ function NavBar() {
                                 Home
                             </Button>
                             <Button
-                                key='About'
-                                href="#about"
+                                key='News'
+                                href="/news"
                                 sx={{ my: 2, color: 'white', display: 'flex' }}
                             >
                                 News
                             </Button>
                             <Button
-                                key='Open'
-                                href="#Open"
+                                key='Docs'
+                                href="/docs"
                                 sx={{ my: 2, color: 'white', display: 'flex' }}
                             >
                                 Docs
