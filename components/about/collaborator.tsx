@@ -2,18 +2,27 @@ import styles from "./collaborator.module.css"
 
 
 function Collaborator(props: any){
-    return(
-        <>
-            <div className={styles.div}>
-                <div className={styles.image}>
-                    Qua va l'immagine
+    if (props.side == "right"){
+        return(
+            <>
+                <div className={styles.div}>
+                    <div className={styles.description}>{props.description}</div>
+                    <div className={styles.image}>{props.image}</div>
                 </div>
-                <div className={styles.description}>
-                    Descrizione del collaboratore
+            </>
+        )
+    } else if (props.side == "left") {
+        return(
+            <>
+                <div className={styles.div}>
+                    <div className={styles.image}>{props.image}</div>
+                    <div className={styles.description}>{props.description}</div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
+    }  else {
+        return(<></>)
+    } 
 
 }
 

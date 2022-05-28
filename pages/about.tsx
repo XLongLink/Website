@@ -12,12 +12,36 @@ const About: NextPage = () => {
             <Typography
                 align='center'
                 variant='h4'
+                sx={{margin: 5}}
             >
                 Descrizione di chi siamo
             </Typography>
-            <div>
-                <Collaborator/>
-
+            <div style={{display: "grid", grid: "auto-flow / 50% 50%"}}>
+                <Collaborator 
+                    side="left"
+                    description= "Descrizione del collaboratoreeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeee eeeeeeee e eeeeeeeeee "
+                    image="Immagine del collaboratore"
+                />
+                <Collaborator 
+                    side="left"
+                    description= "Descrizione del collaboratore"
+                    image="Immagine del collaboratore"
+                />
+                <Collaborator 
+                    side="right"
+                    description= "Descrizione del collaboratore"
+                    image="Immagine del collaboratore"
+                />
+                <Collaborator 
+                    side="right"
+                    description= "Descrizione del collaboratore"
+                    image="Immagine del collaboratore"
+                />
+                <Collaborator 
+                    side="left"
+                    description= "Descrizione del collaboratore"
+                    image="Immagine del collaboratore"
+                />
             </div>
             <Footbar/>
         </>        
