@@ -3,7 +3,7 @@ import BodyStyle from '../styles/bodystyle'
 import Example from "../components/docs/example"
 
 
-const Dashboard: NextPage = () => {
+const Docs: NextPage = () => {
     return (
         <>
             <BodyStyle background="white" />
@@ -19,4 +19,4 @@ const Dashboard: NextPage = () => {
     )
 }
 
-export default Dashboard
+export default Docs

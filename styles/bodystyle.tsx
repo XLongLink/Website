@@ -5,8 +5,6 @@ const styleToString = (style: any) => {
 };
 
 const BodyStyle = (parms: any) => {
-    console.log(parms);
-
     return (
         <style jsx global>
             {
