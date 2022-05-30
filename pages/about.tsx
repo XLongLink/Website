@@ -21,6 +21,7 @@ const About: NextPage = () => {
                     side="left"
                     description="Descrizione del collaboratoreeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeee eeeeeeee e eeeeeeeeee "
                     image="Immagine del collaboratore"
+                    haveDiscord={false}
                 />
                 <Collaborator
                     side="left"
