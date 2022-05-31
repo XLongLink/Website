@@ -4,8 +4,8 @@
     grid-template-columns: 50% 50%;
     width: 94%;
     height: auto;
-    padding: 3%;
-    padding-top: 10%;
+    padding: 0;
+    padding-top: 50px;
 }
 
 .title_font_left {
@@ -55,6 +55,7 @@
 .image_box {
     border: 1px solid black;
     height: 100%;
+    width: 100%;
 }
 
 .div_grid_image_left {
