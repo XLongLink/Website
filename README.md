@@ -11,9 +11,8 @@ npm run dev
 
 #### To Do list:  
 - Adri:
-    - Parte inferiore foto con profilo linkedin/discord/quel che è, affianco e descrizione, prendi esempio da https://astraincubator.com/about
     - sistemare spazio tra descrizioni nella parte user-developer
-    - sistemare codice footbar, navbar, about
+    - sistemare codice footbar, about
 
 #### Auth token
 

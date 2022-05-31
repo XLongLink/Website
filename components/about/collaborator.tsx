@@ -1,6 +1,13 @@
 import styles from "./collaborator.module.css"
 import { SvgIcon, IconButton } from '@mui/material'
 
+/*  Function that display collaborator information on the site
+    - Returns an image of the collaborator
+    - Returns a description of the collaborator
+    - Returns all the social media of the collaborator
+*/
+
+// Defining social icons
 function DiscordIcon(props: any){
     return (
         <SvgIcon sx={props.sx}>
@@ -86,54 +93,266 @@ function YoutubeIcon(props: any){
 }
 
 function Collaborator(props: any){
+    // Collaborator image on the right
     if (props.side == "right"){
         return(
             <>
                 <div className={styles.div}>
+                    {/* DESCRIPTION OF THE COLLABORATOR + SOCIAL ICONS*/}
                     <div className={styles.description}>
                         {props.description}
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            aria-label="discord"
-                            style={{ position: 'relative', right: 2 }}
-                            href={props.discord}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            disabled={!props.haveDiscord}
-                        >
-                            <DiscordIcon/>
-                        </IconButton>
-
+                        <div className={styles.iconDiv}>
+                        { props.discord !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.discord}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <DiscordIcon/>
+                            </IconButton>
+                        }
+                        { props.facebook !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="facebook"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.facebook}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <FacebookIcon/>
+                            </IconButton>
+                        }
+                        { props.github !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="github"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.github}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <GitHubIcon/>
+                            </IconButton>
+                        }
+                        { props.instagram !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="instagram"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.instagram}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <InstagramIcon/>
+                            </IconButton>
+                        }
+                        { props.linkedin !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="linkedin"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.linkedin}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <LinkedinIcon/>
+                            </IconButton>
+                        }
+                        { props.telegram !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="telegram"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.telegram}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <TelegramIcon/>
+                            </IconButton>
+                        }
+                        { props.twitter !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="twitter"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.twitter}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <TwitterIcon/>
+                            </IconButton>
+                        }
+                        { props.youtube !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="youtube"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.youtube}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <YoutubeIcon/>
+                            </IconButton>
+                        }
+                        </div>
                     </div>
+                    {/* IMAGE OF THE COLLABORATOR*/}
                     <div className={styles.image}>{props.image}</div>
                 </div>
             </>
         )
-    } else if (props.side == "left") {
+    } 
+    // Collaborator image on the left
+    else if (props.side == "left") {
         return(
             <>
                 <div className={styles.div}>
+                    {/* IMAGE OF THE COLLABORATOR*/}
                     <div className={styles.image}>{props.image}</div>
+                    {/* DESCRIPTION OF THE COLLABORATOR + SOCIAL ICONS*/}
                     <div className={styles.description}>
                         {props.description}
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            aria-label="discord"
-                            style={{ position: 'relative', right: 2 }}
-                            href={props.discord}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            disabled={!props.haveDiscord}
-                        >
-                            <DiscordIcon/>
-                        </IconButton>
+                        <div className={styles.iconDiv}>
+                        { props.discord !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.discord}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <DiscordIcon/>
+                            </IconButton>
+                        }
+                        { props.facebook !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="facebook"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.facebook}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <FacebookIcon/>
+                            </IconButton>
+                        }
+                        { props.github !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="github"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.github}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <GitHubIcon/>
+                            </IconButton>
+                        }
+                        { props.instagram !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="instagram"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.instagram}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <InstagramIcon/>
+                            </IconButton>
+                        }
+                        { props.linkedin !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="linkedin"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.linkedin}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <LinkedinIcon/>
+                            </IconButton>
+                        }
+                        { props.telegram !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="telegram"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.telegram}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <TelegramIcon/>
+                            </IconButton>
+                        }
+                        { props.twitter !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="twitter"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.twitter}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <TwitterIcon/>
+                            </IconButton>
+                        }
+                        { props.youtube !== undefined &&
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="youtube"
+                                className={styles.icon}
+                                style={{ position: 'relative', right: 2 }}
+                                href={props.youtube}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <YoutubeIcon/>
+                            </IconButton>
+                        }
+                        </div>
                     </div>
                 </div>
             </>
         )
-    }  else {
+    }
+    // not specified the side of the collaborator image
+    else {
         return(<></>)
     } 
 
