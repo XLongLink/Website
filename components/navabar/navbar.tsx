@@ -42,7 +42,7 @@ function NavBar() {
                             </Button>
                             <Button
                                 key='Docs'
-                                href="/docs"
+                                href="https://xlonglink.github.io/docs/api/props"
                                 sx={{ my: 2, color: 'white', display: 'flex' }}
                             >
                                 Docs
@@ -57,7 +57,7 @@ function NavBar() {
                         </Box>
                         {/* WALLETCONNECT BUTTON */}
                         <div style={{ right: 0, position: "absolute" }}>
-                            <Connect/>
+                            <Connect />
                         </div>
 
                     </Toolbar>
