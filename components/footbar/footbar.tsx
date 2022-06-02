@@ -4,6 +4,13 @@ import { AppBar, Box, Toolbar, IconButton, Typography, Container, Menu, Button, 
 import styles from './footbar.module.css'
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
+/*  Navigation bar used at the bottom of the 
+    webpage that display the social media 
+    information and the logo of the site
+
+    props:
+
+*/
 
 
 function DiscordIcon(props: any) {
@@ -93,13 +100,6 @@ function YoutubeIcon(props: any) {
 function Footbar() {
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl(null);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
 
     return (
         <AppBar className={styles.footbar}>

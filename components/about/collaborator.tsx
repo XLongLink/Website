@@ -1,10 +1,21 @@
 import styles from "./collaborator.module.css"
 import { SvgIcon, IconButton } from '@mui/material'
 
-/*  Function that display collaborator information on the site
-    - Returns an image of the collaborator
-    - Returns a description of the collaborator
-    - Returns all the social media of the collaborator
+/*  Function that display collaborator
+    information on the site
+    
+    props:
+        - image[url]: collaborator image to display
+        - description[string]: description of the
+            collaborator to be displayed
+        - discord[url]: collaborator discord account
+        - facebook[url]: collaborator facebbok account
+        - github[url]: collaborator github account
+        - instagram[url]: collaborator instagram account
+        - linkedin[url]: collaborator linkedin account
+        - telegram[url]: collaborator telegram account
+        - twitter[url]: collaborator twitter account
+        - youtube[url]: collaborator youtube account
 */
 
 // Defining social icons
