@@ -18,7 +18,7 @@ function Title(props: any) {
                 <p className={styles.title_font_left}> {props.line_3} </p>
             </div>
             <div className={styles.div_grid_image_right}>
-                <h1 className={styles.image_box}> Qua ci va l'immagine </h1>
+                <h1 className={styles.image_box}> Qua ci va l&apos;immagine </h1>
             </div>
         </div>)
 }

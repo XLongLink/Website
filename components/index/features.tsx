@@ -16,7 +16,7 @@ function Features(props: any) {
         return (
             <div className={styles.div}>
                 <div className={styles.div_grid_image_left}>
-                    <h1 className={styles.image_box}> Qua ci va l'immagine </h1>
+                    <h1 className={styles.image_box}> Qua ci va l&apos;immagine </h1>
                 </div>
                 <div className={styles.div_grid_title_right}>
                     <p className={styles.title_font_right}> {props.title} </p>
@@ -26,7 +26,7 @@ function Features(props: any) {
                     <p className={styles.text_font_right}> {props.line_4} </p>
                 </div>
             </div>)
-            
+
     } else {
         return (
             <div className={styles.div}>
@@ -38,11 +38,11 @@ function Features(props: any) {
                     <p className={styles.text_font_left}> {props.line_4} </p>
                 </div>
                 <div className={styles.div_grid_image_right}>
-                    <h1 className={styles.image_box}> Qua ci va l'immagine </h1>
+                    <h1 className={styles.image_box}> Qua ci va l&apos;immagine </h1>
                 </div>
             </div>)
     }
-    
+
 }
 
 export default Features
