@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import QRCodeModal from "algorand-walletconnect-qrcode-modal";
-import { connector } from "../../walletConnect";
+import { connector } from "./walletconnect";
 import { replaceAddress } from "./redux/walletSlice";
 
 
