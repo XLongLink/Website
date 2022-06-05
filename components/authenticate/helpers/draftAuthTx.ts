@@ -1,6 +1,6 @@
 import algosdk from "algosdk";
 import { formatJsonRpcRequest } from "@json-rpc-tools/utils";
-import { connector } from "../../../walletConnect";
+import { connector } from "../../../walletConnect.js";
 
 export const day1 = 86400000;
 
