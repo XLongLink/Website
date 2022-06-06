@@ -50,7 +50,6 @@ const About: NextPage = () => {
                     twitter=""
                     instagram=""
                     facebook=""
-                    youtube=""
                     linkedin=""
                 />
                 <Collaborator
@@ -64,7 +63,6 @@ const About: NextPage = () => {
                     twitter=""
                     instagram=""
                     facebook=""
-                    youtube=""
                     linkedin=""
                 />
                 <Collaborator
@@ -78,7 +76,6 @@ const About: NextPage = () => {
                     twitter=""
                     instagram=""
                     facebook=""
-                    youtube=""
                     linkedin=""
                 />
                 <Collaborator
@@ -92,7 +89,6 @@ const About: NextPage = () => {
                     twitter=""
                     instagram=""
                     facebook=""
-                    youtube=""
                     linkedin=""
                 />
             </div>
