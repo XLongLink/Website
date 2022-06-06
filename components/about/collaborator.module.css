@@ -11,7 +11,6 @@
 	border: 1px solid black;
 	padding: 0;
 	margin: 0;
-
 }
 
 .description {
@@ -25,6 +24,8 @@
 	padding: 0;
 	margin: 0;
 	border: 1px solid black;
+	background-color: black;
+	color: aliceblue;
 	/* border: 1px solid black; */
 }
 
@@ -41,4 +42,24 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
+}
+
+.name {
+	margin: 0;
+	font-size: 33px;
+}
+
+.desc {
+	margin: 0;
+	font-size: 25px;
+	margin-top: 10px;
+}
+
+.hr {
+	max-width: 50%;
+	margin: 0;
+	border-top: 1px solidrgba(0, 0, 0, 0.1);
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	transform: translate(50%, 0);
 }

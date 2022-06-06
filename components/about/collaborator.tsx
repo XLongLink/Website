@@ -1,6 +1,6 @@
 import styles from "./collaborator.module.css"
 import { SvgIcon, IconButton } from '@mui/material'
-
+import Image from 'next/image'
 /*  Function that display collaborator
     information on the site
     
@@ -111,7 +111,9 @@ function Collaborator(props: any) {
                 <div className={styles.div}>
                     {/* DESCRIPTION OF THE COLLABORATOR + SOCIAL ICONS*/}
                     <div className={styles.description}>
-                        {props.description}
+                        <h2 className={styles.name}> {props.name}</h2>
+                        <p className={styles.desc}>  {props.description} </p>
+                        <hr className={styles.hr} />
                         <div className={styles.iconDiv}>
                             {props.discord !== undefined &&
                                 <IconButton
@@ -228,7 +230,14 @@ function Collaborator(props: any) {
                         </div>
                     </div>
                     {/* IMAGE OF THE COLLABORATOR*/}
-                    <div className={styles.image}>{props.image}</div>
+                    {props.image ? (<Image src={props.image}
+                        width="100%"
+                        height="100%"
+                        quality="100"
+                        unoptimized={true} />) : (
+                        <div className={styles.image}>
+                            Image here
+                        </div>)}
                 </div>
             </>
         )
@@ -238,11 +247,19 @@ function Collaborator(props: any) {
         return (
             <>
                 <div className={styles.div}>
-                    {/* IMAGE OF THE COLLABORATOR*/}
-                    <div className={styles.image}>{props.image}</div>
+                    {props.image ? (<Image src={props.image}
+                        width="100%"
+                        height="100%"
+                        quality="100"
+                        unoptimized={true} />) : (
+                        <div className={styles.image}>
+                            Image here
+                        </div>)}
                     {/* DESCRIPTION OF THE COLLABORATOR + SOCIAL ICONS*/}
                     <div className={styles.description}>
-                        {props.description}
+                        <h2 className={styles.name}> {props.name}</h2>
+                        <p className={styles.desc}>  {props.description} </p>
+                        <hr className={styles.hr} />
                         <div className={styles.iconDiv}>
                             {props.discord !== undefined &&
                                 <IconButton

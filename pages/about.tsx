@@ -2,38 +2,34 @@ import type { NextPage } from 'next'
 import NavBar from '../components/navabar/navbar'
 import Footbar from '../components/footbar/footbar'
 import Collaborator from '../components/about/collaborator'
-import { Typography } from '@mui/material';
+import Description from '../components/about/description'
+import BodyStyle from '../styles/bodystyle'
+
 
 const About: NextPage = () => {
 
     return (
         <>
+            <BodyStyle background="white" />
             <NavBar />
-            <Typography
-                align='center'
-                variant='h4'
-                sx={{ margin: 5 }}
-            >
-                Descrizione di chi siamo
-            </Typography>
+
+            <Description />
+
             <div style={{ display: "grid", grid: "auto-flow / 50% 50%" }}>
                 <Collaborator
                     side="left"
-                    description="Descrizione del collaboratoreeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeee eeeeeeee e eeeeeeeeee "
-                    image="Immagine del collaboratore"
+                    name="Leonardo Saurwein"
+                    description="Founder e Developer"
+                    image="sau.jpg"
                     discord=""
-                    github=""
-                    telegram=""
-                    twitter=""
-                    instagram=""
-                    facebook=""
-                    youtube=""
+                    github="https://github.com/sau1707"
                     linkedin=""
                 />
                 <Collaborator
                     side="left"
-                    description="Descrizione del collaboratore"
-                    image="Immagine del collaboratore"
+                    name="Adriano Saurwein"
+                    description="Developer"
+                    image="adri.jpg"
                     discord=""
                     github=""
                     telegram=""
@@ -45,8 +41,9 @@ const About: NextPage = () => {
                 />
                 <Collaborator
                     side="right"
-                    description="Descrizione del collaboratore"
-                    image="Immagine del collaboratore"
+                    name="Leo Liviabella"
+                    description="Marketing manager"
+                    image="leo.jpg"
                     discord=""
                     github=""
                     telegram=""
@@ -58,8 +55,9 @@ const About: NextPage = () => {
                 />
                 <Collaborator
                     side="right"
-                    description="Descrizione del collaboratore"
-                    image="Immagine del collaboratore"
+                    name="Claudio Casarella"
+                    description="Graphic Designer"
+                    image="cla.jpg"
                     discord=""
                     github=""
                     telegram=""
@@ -71,8 +69,9 @@ const About: NextPage = () => {
                 />
                 <Collaborator
                     side="left"
-                    description="Descrizione del collaboratore"
-                    image="Immagine del collaboratore"
+                    name="Christian Corti"
+                    description="Financial director"
+                    image="corti.jpg"
                     discord=""
                     github=""
                     telegram=""
@@ -84,8 +83,9 @@ const About: NextPage = () => {
                 />
                 <Collaborator
                     side="left"
-                    description="Descrizione del collaboratore"
-                    image="Immagine del collaboratore"
+                    name="Franceso Casarella"
+                    description=""
+                    image="fra.jpg"
                     discord=""
                     github=""
                     telegram=""

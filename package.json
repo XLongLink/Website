@@ -1,43 +1,46 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@json-rpc-tools/utils": "^1.7.6",
-    "@mui/icons-material": "^5.6.2",
-    "@mui/material": "^5.7.0",
-    "@noble/ed25519": "^1.6.0",
-    "@reduxjs/toolkit": "^1.8.1",
-    "@walletconnect/client": "^1.7.8",
-    "@walletconnect/qrcode-modal": "^1.7.8",
-    "algorand-walletconnect-qrcode-modal": "^1.7.4",
-    "algosdk": "^1.16.0",
-    "bootstrap": "^5.1.3",
-    "freewall": "^1.0.8",
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-bootstrap": "^2.4.0",
-    "react-dom": "18.1.0",
-    "react-redux": "^8.0.1",
-    "redux": "^4.2.0",
-    "ua-parser-js": "^1.0.2",
-    "walletconnect-qrcode-modal": "^0.7.28"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.33",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.4",
-    "@types/ua-parser-js": "^0.7.36",
-    "eslint": "8.15.0",
-    "eslint-config-next": "12.1.6",
-    "typescript": "4.6.4"
-  }
+	"name": "my-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.8.1",
+		"@json-rpc-tools/utils": "^1.7.6",
+		"@mui/icons-material": "^5.6.2",
+		"@mui/material": "^5.7.0",
+		"@noble/ed25519": "^1.6.0",
+		"@reduxjs/toolkit": "^1.8.1",
+		"@walletconnect/client": "^1.7.8",
+		"@walletconnect/qrcode-modal": "^1.7.8",
+		"algorand-walletconnect-qrcode-modal": "^1.7.4",
+		"algosdk": "^1.16.0",
+		"bootstrap": "^5.1.3",
+		"freewall": "^1.0.8",
+		"next": "^12.1.6",
+		"particlesjs": "^2.2.3",
+		"react": "^18.1.0",
+		"react-bootstrap": "^2.4.0",
+		"react-dom": "18.1.0",
+		"react-redux": "^8.0.1",
+		"react-tsparticles": "^2.0.6",
+		"redux": "^4.2.0",
+		"tsparticles": "^2.0.6",
+		"ua-parser-js": "^1.0.2",
+		"walletconnect-qrcode-modal": "^0.7.28"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.33",
+		"@types/react": "18.0.9",
+		"@types/react-dom": "18.0.4",
+		"@types/ua-parser-js": "^0.7.36",
+		"eslint": "8.15.0",
+		"eslint-config-next": "12.1.6",
+		"typescript": "4.6.4"
+	}
 }
