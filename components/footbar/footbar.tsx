@@ -102,10 +102,10 @@ function Footbar() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     return (
-        <AppBar className={styles.footbar}>
+        <div className={styles.footbar}>
             <Container maxWidth="xl">
                 <Toolbar>
-                    <Box className={styles.left}>
+                    <Box className={styles.logo}>
                         <CopyrightIcon
                             sx={{ display: "flex", mr: 2 }}
                         />
@@ -213,7 +213,7 @@ function Footbar() {
                     </IconButton>
                 </Toolbar>
             </Container>
-        </AppBar>
+        </div>
 
     )
 }

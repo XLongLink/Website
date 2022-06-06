@@ -4,7 +4,8 @@
     background: #1C1C1C;
 }
 
-.left {
+.logo {
     display: flex;
     flex-grow: 1;
+    color: white;
 }
