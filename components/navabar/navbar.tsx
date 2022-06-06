@@ -12,7 +12,7 @@ import Connect from "../authenticate/connect";
 function NavBar() {
     return (
         <>
-            <AppBar position="relative" style={{ background: '#1C1C1C' }}>
+            <AppBar position="relative" style={{ background: '#000' }}>
                 <Container maxWidth="xl">
                     <Toolbar>
                         {/* LOGO */}

@@ -20,7 +20,7 @@ function Description() {
                 options={{
                     background: {
                         color: {
-                            value: "#000",
+                            value: "#191919",
                         },
                     },
                     fpsLimit: 120,
@@ -71,7 +71,7 @@ function Description() {
             />
             <p className={styles.p}>
                 We are a team of students and close friends, passionate about informatics and blockchain technology<br />
-                Our vision of web3 is a secure, fast and practical to use internet.<br />
+                Our vision of web3 is a secure, fast and practical to use internet<br />
                 Our goal is to be able to contribute in the foundations of the creation of a solid ecosystem
             </p>
 
