@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./element.module.css"
 
 /*
+    https://blog.nrwl.io/read-and-render-md-files-with-next-js-and-nx-89a85c1d9b44
     Each element rappresent a news,
     depending on the news, a diffrent size can be set.
     Props:
@@ -21,7 +22,16 @@ import styles from "./element.module.css"
     [to do] move feet bar to the bottom
     [to do] create standard for markdown file (font, icons, ecc)
 */
+import fs from 'fs';
+import { join } from 'path';
+import matter from 'gray-matter';
+
 function Element(props: any) {
+
+    const fileContents = fs.readFileSync("./news/articles/primo.md")
+    console.log(fileContents)
+    const { data, content } = matter(fileContents);
+
     const [show, setShow] = useState(false);
 
     const size = `${props.size} brick ${styles[`s${props.size}`]}`;

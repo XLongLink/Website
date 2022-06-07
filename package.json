@@ -22,6 +22,7 @@
 		"algosdk": "^1.16.0",
 		"bootstrap": "^5.1.3",
 		"freewall": "^1.0.8",
+		"gray-matter": "^4.0.3",
 		"next": "^12.1.6",
 		"particlesjs": "^2.2.3",
 		"react": "^18.1.0",
@@ -30,6 +31,8 @@
 		"react-redux": "^8.0.1",
 		"react-tsparticles": "^2.0.6",
 		"redux": "^4.2.0",
+		"remark": "^14.0.2",
+		"remark-html": "^15.0.1",
 		"tsparticles": "^2.0.6",
 		"ua-parser-js": "^1.0.2",
 		"walletconnect-qrcode-modal": "^0.7.28"

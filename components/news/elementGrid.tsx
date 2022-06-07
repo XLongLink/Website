@@ -68,9 +68,9 @@ function ElementGrid() {
         <div id="container" className={styles.container}>
             <Element
                 size="3x3"
-                title="Titolo"
-                image="image"
-                desc="desc"
+                title="First News"
+                data="DATA"
+                name="primo"
             />
             <Element size="3x2" />
             <Element size="2x3" />
