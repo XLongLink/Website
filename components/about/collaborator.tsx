@@ -230,7 +230,7 @@ function Collaborator(props: any) {
                         </div>
                     </div>
                     {/* IMAGE OF THE COLLABORATOR*/}
-                    {props.image ? (<Image src={props.image}
+                    {props.image ? (<Image src={`/about/${props.image}`}
                         width="100%"
                         height="100%"
                         quality="100"
@@ -247,7 +247,7 @@ function Collaborator(props: any) {
         return (
             <>
                 <div className={styles.div}>
-                    {props.image ? (<Image src={props.image}
+                    {props.image ? (<Image src={`/about/${props.image}`}
                         width="100%"
                         height="100%"
                         quality="100"

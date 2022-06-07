@@ -11,7 +11,7 @@ const News: NextPage = () => {
             <Head>
                 <title> News </title>
             </Head>
-            <BodyStyle background="white" />
+            <BodyStyle background="#191919" />
             <NavBar />
             <ElementGrid />
             <Footbar />
