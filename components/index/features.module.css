@@ -2,30 +2,31 @@
     position: relative;
     display: inline-grid;
     grid-template-columns: 50% 50%;
-    width: 94%;
+    width: 100%;
     height: auto;
     padding: 0;
     padding-top: 50px;
+    color: aliceblue;
 }
 
 .title_font_left {
+    color: #DF00FF;
     letter-spacing: 3px;
     font-family: "Times New Roman", Times, serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     text-align: right;
-    text-shadow: 0px 4px 7px rgba(81, 67, 21, 0.8);
     padding: 0px;
     margin: 0px;
 }
 
 .title_font_right {
+    color: #DF00FF;
     letter-spacing: 3px;
     font-family: "Times New Roman", Times, serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     text-align: left;
-    text-shadow: 0px 4px 7px rgba(81, 67, 21, 0.8);
     padding: 0px;
     margin: 0px;
 }
@@ -33,10 +34,9 @@
 .text_font_left {
     letter-spacing: 3px;
     font-family: "Times New Roman", Times, serif;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: normal;
     text-align: right;
-    text-shadow: 0px 4px 7px rgba(81, 67, 21, 0.8);
     padding: 0px;
     margin: 0px;
 }
@@ -44,10 +44,9 @@
 .text_font_right {
     letter-spacing: 3px;
     font-family: "Times New Roman", Times, serif;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: normal;
     text-align: left;
-    text-shadow: 0px 4px 7px rgba(81, 67, 21, 0.8);
     padding: 0px;
     margin: 0px;
 }

@@ -4,15 +4,18 @@ import Footbar from '../components/footbar/footbar'
 import Collaborator from '../components/about/collaborator'
 import Description from '../components/about/description'
 import BodyStyle from '../styles/bodystyle'
+import Head from 'next/head'
 
 
 const About: NextPage = () => {
 
     return (
         <>
+            <Head>
+                <title> About </title>
+            </Head>
             <BodyStyle background="white" />
             <NavBar />
-
             <Description />
 
             <div style={{ display: "grid", grid: "auto-flow / 50% 50%" }}>

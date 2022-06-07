@@ -3,12 +3,16 @@ import BodyStyle from '../styles/bodystyle'
 import NavBar from '../components/navabar/navbar'
 import Footbar from '../components/footbar/footbar'
 import ElementGrid from '../components/news/elementGrid'
+import Head from 'next/head'
 
 const News: NextPage = () => {
     return (
         <>
-            <NavBar />
+            <Head>
+                <title> News </title>
+            </Head>
             <BodyStyle background="white" />
+            <NavBar />
             <ElementGrid />
             <Footbar />
         </>

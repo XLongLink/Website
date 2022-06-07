@@ -1,26 +1,88 @@
 // da settare
 import styles from "./title.module.css"
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { IOptions, RecursivePartial } from "tsparticles-engine";
 
-/*  Switch between Users and Developer 
-    props:
-        - line_1: -> first line of the title
-        - line_2: -> second line of the title
-        - line_3: -> third line of the title
-[TO DO] - img: -> url image to show 
-*/
+const particleOptions = {
+    background: {
+        color: {
+            value: "#191919",
+        },
+    },
+    fpsLimit: 60,
+    particles: {
+        color: {
+            value: "#DF00FF",
+        },
+        links: {
+            color: "#DF00FF",
+            distance: 500,
+            enable: true,
+            opacity: 0.5,
+            width: 1.1,
+        },
+        collisions: {
+            enable: true,
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+                default: "bounce",
+            },
+            random: false,
+            speed: 0.1,
+            straight: false,
+        },
+        number: {
+            density: {
+                enable: true,
+                area: 1000,
+            },
+            value: 50,
+        },
+        opacity: {
+            value: 1,
+        },
+        shape: {
+            type: "circle",
+        },
+        size: {
+            value: { min: 1, max: 3 },
+        },
+    },
+    detectRetina: true,
+    fullScreen: { enable: false }
+}
 
-function Title(props: any) {
+function Title() {
+
+    const particlesInit = async (main: any) => {
+        await loadFull(main)
+    };
+
     return (
         <div className={styles.div}>
-            <div className={styles.div_grid_title_left}>
-                <p className={styles.title_font_left}> {props.line_1} </p>
-                <p className={styles.title_font_left}> {props.line_2} </p>
-                <p className={styles.title_font_left}> {props.line_3} </p>
+            <Particles
+                className={styles.particles}
+                id="tsparticles"
+                init={particlesInit}
+                options={particleOptions as RecursivePartial<IOptions>}
+            />
+            <div className={styles.contentdiv}>
+                <div className={styles.div_grid_title}>
+                    <p className={styles.title_font}>
+                        Explore the power
+                        <br />
+                        of a interconnected
+                        <br />
+                        ecosystem
+                    </p>
+                </div>
             </div>
-            <div className={styles.div_grid_image_right}>
-                <h1 className={styles.image_box}> Qua ci va l&apos;immagine </h1>
-            </div>
-        </div>)
+        </div>
+    )
 }
 
 export default Title

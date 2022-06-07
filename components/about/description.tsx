@@ -1,6 +1,5 @@
 import styles from "./description.module.css"
 import Particles from "react-tsparticles";
-import { Typography } from '@mui/material';
 import { loadFull } from "tsparticles";
 
 function Description() {

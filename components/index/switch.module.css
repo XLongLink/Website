@@ -1,22 +1,47 @@
+/*
+    Main div containign all the items
+*/
+.div {
+    background-color: #191919;
+    margin: 0;
+    padding-top: 100px;
+}
+
+/*
+    Title
+*/
+.title {
+    margin: 0;
+    letter-spacing: 3px;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    padding: 100px;
+    padding-bottom: 20px;
+}
+
+/*
+    Switch
+*/
 .toggle {
     position: relative;
 }
 
 .button {
-    background: #12181b;
-    color: #FFF;
+    background: rgb(235, 235, 235);
     border-radius: 30px;
     width: 600px;
     text-align: center;
     font-size: 30px;
-    color: #FFF;
+    color: #12181b;
     position: relative;
     display: inline-grid;
     grid-template-columns: 50% 50%;
 }
 
 .switch {
-    background: #2a2e35;
+    background: white;
     position: absolute;
     top: 0px;
     left: 0px;
