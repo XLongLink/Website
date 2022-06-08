@@ -1,18 +1,40 @@
-.div {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 0;
-    margin: 0;
-    border: 0;
+.collaboratorBox {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
+
+.div {
+    padding: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    aspect-ratio: 2 / 1;
+}
+
+.boxdimens {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagediv {
+    width: 50%;
+}
+
 
 .image {
-    aspect-ratio: 1;
+    position: relative;
     padding: 0;
     margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
+
 .description {
+    width: 50%;
     aspect-ratio: 1;
     display: flex;
     text-align: center;
@@ -24,8 +46,8 @@
     margin: 0;
     background-color: var(--background);
     color: aliceblue;
-    /* border: 1px solid black; */
 }
+
 
 .icon {
     border: 1px;
@@ -44,22 +66,26 @@
 
 .name {
     margin: 0;
-    font-size: 33px;
+    margin-bottom: 10px;
+    font-size: min(4vw, 28px);
 }
 
 .desc {
-    margin: 0;
-    font-size: 25px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: min(3vw, 20px);
 }
 
 .hr {
     max-width: 50%;
     margin: 0;
     border-top: 1px solidrgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    margin-top: 1rem;
     transform: translate(50%, 0);
 }
 
-@media (max-width: 500px) {}
+@media (max-width: 1000px) {
+    .div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

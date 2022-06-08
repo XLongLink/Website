@@ -1,7 +1,8 @@
 .p {
     position: absolute;
     width: 100%;
-    font-size: 30px;
+    font-size: min(2.5vw, 28px);
+    max-width: 90%;
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -12,6 +13,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    white-space: pre-wrap;
 }
 
 .background {
@@ -31,12 +33,13 @@
     Phone css
 */
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
     .p {
-        max-width: 400px;
+        max-width: 80vw;
+        font-size: 28px;
     }
 
     .background {
-        height: 90vh;
+        height: calc(900px - 50vw);
     }
 }

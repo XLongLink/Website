@@ -1,7 +1,7 @@
 import styles from "./collaborator.module.css"
-import { IconButton } from '@mui/material'
-import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube } from "../icons"
 import Image from 'next/image'
+import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube } from "../icons"
+import useWindowSize from "../../customHooks/useWindowSize";
 
 /*  Function that display collaborator
     information on the site
@@ -19,270 +19,116 @@ import Image from 'next/image'
         - twitter[url]: collaborator twitter account
         - youtube[url]: collaborator youtube account
 */
-
-/*
-
-*/
-
-function Collaborator(props: any) {
-    // Collaborator image on the right
-    if (props.side == "right") {
-        return (
-            <>
-                <div className={styles.div}>
-                    {/* DESCRIPTION OF THE COLLABORATOR + SOCIAL ICONS*/}
-                    <div className={styles.description}>
-                        <h2 className={styles.name}> {props.name}</h2>
-                        <p className={styles.desc}>  {props.description} </p>
-                        <hr className={styles.hr} />
-                        <div className={styles.iconDiv}>
-                            {props.discord !== undefined &&
-                                <Discord url={props.discord} className={styles.icon} />
-                            }
-                            {props.facebook !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="facebook"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.facebook}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Facebook />
-                                </IconButton>
-                            }
-                            {props.github !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="github"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.github}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <GitHub />
-                                </IconButton>
-                            }
-                            {props.instagram !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="instagram"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.instagram}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Instagram />
-                                </IconButton>
-                            }
-                            {props.linkedin !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="linkedin"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.linkedin}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Linkedin />
-                                </IconButton>
-                            }
-                            {props.telegram !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="telegram"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.telegram}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Telegram />
-                                </IconButton>
-                            }
-                            {props.twitter !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="twitter"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.twitter}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Twitter />
-                                </IconButton>
-                            }
-                            {props.youtube !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="youtube"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.youtube}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <YouTube />
-                                </IconButton>
-                            }
-                        </div>
-                    </div>
-                    {/* IMAGE OF THE COLLABORATOR*/}
-                    {props.image ? (<Image src={`/about/${props.image}`}
-                        width="100%"
-                        height="100%"
-                        quality="100"
-                        unoptimized={true} />) : (
-                        <div className={styles.image}>
-                            Image here
-                        </div>)}
-                </div>
-            </>
-        )
+export interface Person {
+    name: string;
+    lastname: string;
+    image: string;
+    role?: string;
+    social?: {
+        discord?: string;
+        github?: string;
+        youtube?: string;
+        instagram?: string;
+        telegram?: string;
+        linkedin?: string;
+        facebook?: string;
+        twitter?: string
     }
-    // Collaborator image on the left
-    else if (props.side == "left") {
-        return (
-            <>
-                <div className={styles.div}>
-                    {props.image ? (<Image src={`/about/${props.image}`}
-                        width="100%"
-                        height="100%"
-                        quality="100"
-                        unoptimized={true} />) : (
-                        <div className={styles.image}>
-                            Image here
-                        </div>)}
-                    {/* DESCRIPTION OF THE COLLABORATOR + SOCIAL ICONS*/}
-                    <div className={styles.description}>
-                        <h2 className={styles.name}> {props.name}</h2>
-                        <p className={styles.desc}>  {props.description} </p>
-                        <hr className={styles.hr} />
-                        <div className={styles.iconDiv}>
-                            {props.discord !== undefined &&
-                                <Discord url={props.discord} className={styles.icon} />
-                            }
-                            {props.facebook !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="facebook"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.facebook}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Facebook />
-                                </IconButton>
-                            }
-                            {props.github !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="github"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.github}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <GitHub />
-                                </IconButton>
-                            }
-                            {props.instagram !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="instagram"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.instagram}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Instagram />
-                                </IconButton>
-                            }
-                            {props.linkedin !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="linkedin"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.linkedin}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Linkedin />
-                                </IconButton>
-                            }
-                            {props.telegram !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="telegram"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.telegram}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Telegram />
-                                </IconButton>
-                            }
-                            {props.twitter !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="twitter"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.twitter}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <Twitter />
-                                </IconButton>
-                            }
-                            {props.youtube !== undefined &&
-                                <IconButton
-                                    size="large"
-                                    edge="start"
-                                    aria-label="youtube"
-                                    className={styles.icon}
-                                    style={{ position: 'relative', right: 2 }}
-                                    href={props.youtube}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    <YouTube />
-                                </IconButton>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </>
-        )
-    }
-    // not specified the side of the collaborator image
-    else {
-        return (<></>)
-    }
-
 }
 
-export default Collaborator
+function CollaboratorBox(props: any) {
+    const { width } = useWindowSize();
+
+    return (
+        <div className={styles.collaboratorBox}>
+            {
+                width > 1000 ? (
+                    <>
+                        {
+                            props.utenti.map((element: Person, index: number) => {
+                                return <Collaborator flip={Math.floor(index / 2) % 2 - 1} {...element} />
+                            })
+                        }
+                    </>
+                ) : (
+                    <>
+                        {
+                            props.utenti.map((element: Person, index: number) => {
+                                return <Collaborator flip={index % 2 - 1} {...element} />
+                            })
+                        }
+                    </>
+                )
+            }
+        </div >
+    )
+}
+
+function FotoBox(props: any) {
+    return (
+        <div className={styles.imagediv}>
+            <Image src={`/about/${props.url}`}
+                width="100%"
+                height="100%"
+                quality="100"
+                layout="responsive"
+                unoptimized={true} />
+        </div>
+    )
+}
+
+function TextBox(props: any) {
+    return (
+        < div className={styles.description}>
+            <h2 className={styles.name}> {props.name} {props.lastname}</h2>
+            {props.role && <p className={styles.desc}>  {props.role} </p>}
+            <hr className={styles.hr} />
+            <div className={styles.iconDiv}>
+                {props.social && props.social.discord !== undefined &&
+                    <Discord url={props.social.discord} className={styles.icon} />
+                }
+                {props.social && props.social.facebook !== undefined &&
+                    <Facebook url={props.social.facebook} className={styles.icon} />
+                }
+                {props.social && props.social.github !== undefined &&
+                    <GitHub url={props.social.github} className={styles.icon} />
+                }
+                {props.social && props.social.instagram !== undefined &&
+                    <Instagram url={props.social.instagram} className={styles.icon} />
+                }
+                {props.social && props.social.linkedin !== undefined &&
+                    <Linkedin url={props.social.linkedin} className={styles.icon} />
+                }
+                {props.social && props.social.telegram !== undefined &&
+                    <Telegram url={props.social.telegram} className={styles.icon} />
+                }
+                {props.social && props.social.twitter !== undefined &&
+                    <Twitter url={props.social.twitter} className={styles.icon} />
+                }
+                {props.social && props.social.youtube !== undefined &&
+                    <YouTube url={props.social.youtube} className={styles.icon} />
+                }
+            </div>
+        </div>
+
+    )
+}
+function Collaborator(props: any) {
+    return (
+        <div className={styles.div}>
+            <div className={styles.boxdimens} >
+                {props.flip ? (
+                    <>
+                        <FotoBox url={props.image} />
+                        <TextBox {...props} />
+                    </>) : (
+                    <>
+                        <TextBox {...props} />
+                        <FotoBox url={props.image} />
+                    </>)}
+            </div>
+        </div >
+    )
+}
+
+export default CollaboratorBox

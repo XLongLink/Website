@@ -82,8 +82,4 @@ function Description(props: any) {
     )
 }
 
-/*
-
-*/
-
 export default Description
