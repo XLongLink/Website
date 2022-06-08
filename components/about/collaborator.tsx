@@ -46,7 +46,7 @@ function CollaboratorBox(props: any) {
                     <>
                         {
                             props.utenti.map((element: Person, index: number) => {
-                                return <Collaborator flip={Math.floor(index / 2) % 2 - 1} {...element} />
+                                return <Collaborator key={index} flip={Math.floor(index / 2) % 2 - 1} {...element} />
                             })
                         }
                     </>
@@ -54,7 +54,7 @@ function CollaboratorBox(props: any) {
                     <>
                         {
                             props.utenti.map((element: Person, index: number) => {
-                                return <Collaborator flip={index % 2 - 1} {...element} />
+                                return <Collaborator key={index} flip={index % 2 - 1} {...element} />
                             })
                         }
                     </>
@@ -71,6 +71,7 @@ function FotoBox(props: any) {
                 width="100%"
                 height="100%"
                 quality="100"
+                alt={props.url}
                 layout="responsive"
                 unoptimized={true} />
         </div>
