@@ -6,11 +6,11 @@
     height: auto;
     padding: 0;
     padding-top: 50px;
-    color: aliceblue;
+    color: var(--fancywhite);
 }
 
 .title_font_left {
-    color: var(--blue);
+    color: var(--pink);
     /*color: #DF00FF;*/
     letter-spacing: 3px;
     font-family: "Times New Roman", Times, serif;
@@ -19,10 +19,11 @@
     text-align: right;
     padding: 0px;
     margin: 0px;
+    margin-right: 20px;
 }
 
 .title_font_right {
-    color: #DF00FF;
+    color: var(--pink);
     letter-spacing: 3px;
     font-family: "Times New Roman", Times, serif;
     font-size: 50px;
@@ -30,6 +31,7 @@
     text-align: left;
     padding: 0px;
     margin: 0px;
+    margin-left: 20px;
 }
 
 .text_font_left {
@@ -40,6 +42,7 @@
     text-align: right;
     padding: 0px;
     margin: 0px;
+    margin-right: 20px;
 }
 
 .text_font_right {
@@ -50,6 +53,7 @@
     text-align: left;
     padding: 0px;
     margin: 0px;
+    margin-left: 20px;
 }
 
 .image_box {

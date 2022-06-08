@@ -8,7 +8,7 @@ const colors = {
     background: "#191919",
     white: "#FFF",
     fancywhite: "whitesmoke",
-    pink: "pink"
+    pink: "#DF00FF"
 }
 
 export default colors

@@ -5,7 +5,6 @@ import NavBar from '../components/navabar/navbar'
 import Switch from "../components/index/switch"
 import Title from "../components/index/title"
 import Footbar from '../components/footbar/footbar'
-import BodyStyle from '../styles/bodystyle'
 import About from '../components/index/about'
 
 const Home: NextPage = () => {
@@ -14,7 +13,6 @@ const Home: NextPage = () => {
             <Head>
                 <title> Home</title>
             </Head>
-            <BodyStyle background="white" />
             <NavBar />
             <Title />
             <About />
