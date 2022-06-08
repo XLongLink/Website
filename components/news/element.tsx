@@ -22,16 +22,7 @@ import styles from "./element.module.css"
     [to do] move feet bar to the bottom
     [to do] create standard for markdown file (font, icons, ecc)
 */
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
-
 function Element(props: any) {
-
-    const fileContents = fs.readFileSync("./news/articles/primo.md")
-    console.log(fileContents)
-    const { data, content } = matter(fileContents);
-
     const [show, setShow] = useState(false);
 
     const size = `${props.size} brick ${styles[`s${props.size}`]}`;

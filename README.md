@@ -50,6 +50,15 @@ npm run dev
 1. Creare base dashboard dove developers possono sperimentare con la demo.
    La demo di LL sarà 1 solo server dove tutti possono modificare dati per sperimentare
 
+- Icone:
+0. Aggiunto sotto ./icons
+1. Aggiungere url in props che si apre in _black
+2. Aggiungere size in props che determina la grandezza
+
+## Media
+
+@media (max-width: 500px) {}
+
 ## Auth token
 
 Import `Storage` from `customHooks/useStorage` then:

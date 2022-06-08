@@ -12,6 +12,7 @@ import styles from "./features.module.css"
 */
 
 function Features(props: any) {
+    console.log("loaded")
     if (props.side == "right") {
         return (
             <div className={styles.div}>

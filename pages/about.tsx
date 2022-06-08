@@ -3,7 +3,6 @@ import NavBar from '../components/navabar/navbar'
 import Footbar from '../components/footbar/footbar'
 import Collaborator from '../components/about/collaborator'
 import Description from '../components/about/description'
-import BodyStyle from '../styles/bodystyle'
 import Head from 'next/head'
 
 
@@ -14,9 +13,12 @@ const About: NextPage = () => {
             <Head>
                 <title> About </title>
             </Head>
-            <BodyStyle background="white" />
             <NavBar />
-            <Description />
+            <Description text={[
+                "We are a team of students and close friends, passionate about informatics and blockchain technology",
+                "Our vision of web3 is a secure, fast and practical to use internet",
+                "Our goal is to be able to contribute in the foundations of the creation of a solid ecosystem"
+            ]} />
 
             <div style={{ display: "grid", grid: "auto-flow / 50% 50%" }}>
                 <Collaborator
