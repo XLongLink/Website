@@ -55,6 +55,7 @@ function NavBar() {
                             </Button>
                             <Button
                                 key='Docs'
+                                target="_blank"
                                 href="https://xlonglink.github.io/docs/api/props"
                                 sx={{ my: 2, color: 'white', display: 'flex' }}
                             >
@@ -69,14 +70,14 @@ function NavBar() {
                             </Button>
                         </Box>
                         {/* DROPDOWN MENU */}
-                        <Box sx={{ flexGrow: 1, right: 0, position:'absolute', display: { xs: 'flex', sm:'flex', md: 'none' }}}>
+                        <Box sx={{ flexGrow: 1, right: 0, position: 'absolute', display: { xs: 'flex', sm: 'flex', md: 'none' } }}>
                             <IconButton
                                 size="large"
                                 aria-controls="menu-appbar"
                                 onClick={handleOpenNavMenu}
                                 color="inherit"
                             >
-                              <MenuIcon />
+                                <MenuIcon />
                             </IconButton>
                             <Menu
                                 id="menu-appbar"
@@ -93,29 +94,30 @@ function NavBar() {
                                 open={Boolean(anchorElNav)}
                                 onClose={handleCloseNavMenu}
                                 className={styles.menu}
-                            >  
-                                <MenuItem 
+                            >
+                                <MenuItem
                                     key='Home'
                                     href="/"
                                     onClick={handleCloseNavMenu}
                                 >
                                     <Typography textAlign="center">Home</Typography>
                                 </MenuItem>
-                                <MenuItem 
+                                <MenuItem
                                     key='News'
                                     href="/news"
                                     onClick={handleCloseNavMenu}
                                 >
                                     <Typography textAlign="center">News</Typography>
                                 </MenuItem>
-                                <MenuItem 
+                                <MenuItem
                                     key='Docs'
                                     href="https://xlonglink.github.io/docs/api/props"
+                                    target="_blank"
                                     onClick={handleCloseNavMenu}
                                 >
                                     <Typography textAlign="center">Docs</Typography>
                                 </MenuItem>
-                                <MenuItem 
+                                <MenuItem
                                     key='About'
                                     href="/about"
                                     onClick={handleCloseNavMenu}
@@ -127,8 +129,8 @@ function NavBar() {
 
 
                         {/* WALLETCONNECT BUTTON */}
-                        <Box sx={{ right: 0, position:'absolute', display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' }}}>
-                            <Connect/>
+                        <Box sx={{ right: 0, position: 'absolute', display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
+                            <Connect />
                         </Box>
 
                     </Toolbar>
