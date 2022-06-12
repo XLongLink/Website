@@ -112,7 +112,6 @@ function Footbar() {
                 className={styles.linkbox}
             >
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}
@@ -124,7 +123,6 @@ function Footbar() {
                 </IconButton>
 
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}
@@ -136,7 +134,6 @@ function Footbar() {
                 </IconButton>
 
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}
@@ -148,7 +145,6 @@ function Footbar() {
                 </IconButton>
 
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}
@@ -160,7 +156,6 @@ function Footbar() {
                 </IconButton>
 
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}
@@ -184,7 +179,6 @@ function Footbar() {
                             </IconButton>    */}
 
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}
@@ -196,7 +190,6 @@ function Footbar() {
                 </IconButton>
 
                 <IconButton
-                    size="large"
                     edge="start"
                     aria-label="discord"
                     className={styles.icon}

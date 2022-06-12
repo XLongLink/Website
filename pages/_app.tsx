@@ -7,6 +7,8 @@ import { useStorage, Storage } from '../customHooks/useStorage';
 import { useEffect } from 'react';
 import Head from 'next/head';
 
+import { StyledEngineProvider } from '@mui/material/styles';
+
 function MyApp({ Component, pageProps }: AppProps) {
 
     // load colors as css variables
@@ -23,11 +25,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Head>
                 <link rel="shortcut icon" href="/favicon-16x16.png" />
             </Head>
-            <Provider store={store}>
-                <Storage.Provider value={{ token: token, setToken: setToken }}>
-                    <Component {...pageProps} />
-                </Storage.Provider>
-            </Provider>
+            <StyledEngineProvider injectFirst>
+                <Provider store={store}>
+                    <Storage.Provider value={{ token: token, setToken: setToken }}>
+                        <Component {...pageProps} />
+                    </Storage.Provider>
+                </Provider>
+            </StyledEngineProvider>
         </div>
 
     )
