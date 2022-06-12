@@ -99,118 +99,148 @@ function YoutubeIcon(props: any) {
 
 function Footbar() {
 
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
     return (
         <div className={styles.footbar}>
-            <Container maxWidth="xl">
-                <Toolbar>
-                    <Box className={styles.logo}>
+            <Container maxWidth="xl" >
+                <Toolbar sx={{  xs: {display: "flex", alignContent: "center", justifyContent: "center", height: 150},
+                                sm: {display: "flex", alignContent: "center", justifyContent: "center", height: 150},
+                                md: {},
+                                lg: {},
+                                xl: {}
+                            }}
+                >
+                    <Box  sx={{ xs: {position: "static"},
+                                sm: {position: "static"},
+                                md: {},
+                                lg: {},
+                                xl: {}
+                            }}
+                    >
                         <CopyrightIcon
-                            sx={{ display: "flex", mr: 2 }}
+                            sx={{   xs: {position: "static"},
+                                    sm: {position: "static"},
+                                    md: {display: "flex", mr: 2},
+                                    lg: {display: "flex", mr: 2},
+                                    xl: {display: "flex", mr: 2}
+                                }}
+                            className={styles.logo}
                         />
                         <Typography
-                            sx={{ display: "flex", mr: 2, fontSize: "1.2rem" }}
+                            sx={{   fontSize: "1.2rem" ,
+                                    xs: {},
+                                    sm: {},
+                                    md: {display: "flex", mr: 2},
+                                    lg: {display: "flex", mr: 2},
+                                    xl: {display: "flex", mr: 2}
+                                }}
+                            className={styles.logo}
                         >
-                            LL Technologies 2022
+                                LL Technologies 2022
                         </Typography>
+                        <Box sx={{  xs: {position: "static"},
+                                    sm: {position: "static"},
+                                    md: {},
+                                    lg: {},
+                                    xl: {}
+                                }}
+                        >
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://discord.gg/cePXZtT8tz"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <DiscordIcon />
+                            </IconButton>
+
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://www.facebook.com/profile.php?id=100081241820430"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <FacebookIcon />
+                            </IconButton>
+
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://github.com/XLongLink"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <GitHubIcon />
+                            </IconButton>
+
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://www.instagram.com/xlonglink/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <InstagramIcon />
+                            </IconButton>
+
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://www.linkedin.com/company/longlink/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <LinkedinIcon />
+                            </IconButton>
+
+                            {/* <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <TelegramIcon/>
+                            </IconButton>    */}
+
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://twitter.com/xLongLink"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <TwitterIcon />
+                            </IconButton>
+
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                aria-label="discord"
+                                className={styles.icon}
+                                href="https://www.youtube.com/channel/UCJaljchO8u1iU9ILlij7wsg/featured"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <YoutubeIcon />
+                            </IconButton>
+                        </Box>
                     </Box>
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://discord.gg/cePXZtT8tz"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <DiscordIcon />
-                    </IconButton>
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://www.facebook.com/profile.php?id=100081241820430"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <FacebookIcon />
-                    </IconButton>
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://github.com/XLongLink"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <GitHubIcon />
-                    </IconButton>
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://www.instagram.com/xlonglink/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <InstagramIcon />
-                    </IconButton>
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://www.linkedin.com/company/longlink/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <LinkedinIcon />
-                    </IconButton>
-
-                    {/* <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <TelegramIcon/>
-                    </IconButton>    */}
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://twitter.com/xLongLink"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <TwitterIcon />
-                    </IconButton>
-
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        aria-label="discord"
-                        style={{ position: 'relative', right: 2 }}
-                        href="https://www.youtube.com/channel/UCJaljchO8u1iU9ILlij7wsg/featured"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <YoutubeIcon />
-                    </IconButton>
                 </Toolbar>
             </Container>
         </div>

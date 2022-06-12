@@ -6,6 +6,9 @@
 
 .logo {
 	display: flex;
-	flex-grow: 1;
 	color: white;
+}
+
+.icon {
+	position: relative;
 }
