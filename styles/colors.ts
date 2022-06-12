@@ -7,6 +7,7 @@
 const colors = {
     background: "#191919",
     white: "#FFF",
+    black: "#000",
     fancywhite: "whitesmoke",
     pink: "#DF00FF"
 }

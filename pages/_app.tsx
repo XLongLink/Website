@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "../components/authenticate/redux/store";
 import { useStorage, Storage } from '../customHooks/useStorage';
 import { useEffect } from 'react';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -18,11 +19,17 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const [token, setToken] = useStorage("authToken")
     return (
-        <Provider store={store}>
-            <Storage.Provider value={{ token: token, setToken: setToken }}>
-                <Component {...pageProps} />
-            </Storage.Provider>
-        </Provider>
+        <div>
+            <Head>
+                <link rel="shortcut icon" href="/favicon-16x16.png" />
+            </Head>
+            <Provider store={store}>
+                <Storage.Provider value={{ token: token, setToken: setToken }}>
+                    <Component {...pageProps} />
+                </Storage.Provider>
+            </Provider>
+        </div>
+
     )
 }
 

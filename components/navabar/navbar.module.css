@@ -1,3 +1,31 @@
-.menu .MuiPaper-root {
-    background-color: black;
+.menu{
+    background: var(--black);
+}
+
+.appbar {
+    background: var(--black);
+}
+
+.box {
+    padding: 10px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.text:hover {
+    color: var(--pink);
+}
+
+.imagebox {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+    height: 90px;
+    width: 250px;
+}
+
+@media (max-width: 1000px) {
 }
