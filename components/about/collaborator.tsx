@@ -19,6 +19,7 @@ import useWindowSize from "../../customHooks/useWindowSize";
         - twitter[url]: collaborator twitter account
         - youtube[url]: collaborator youtube account
 */
+
 export interface Person {
     name: string;
     lastname: string;

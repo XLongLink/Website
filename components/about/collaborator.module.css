@@ -83,7 +83,7 @@
     transform: translate(50%, 0);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .div {
         flex: 0 0 100%;
         max-width: 100%;

@@ -103,11 +103,11 @@ function NavBar() {
                                 vertical: 'top',
                                 horizontal: 'right',
                             }}
+                            className={styles.menu}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                         >
                             <MenuItem
-                                className={styles.menu}
                                 key='Home'
                                 href="/"
                                 onClick={handleCloseNavMenu}

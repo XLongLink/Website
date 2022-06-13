@@ -22,7 +22,7 @@ e controllare che non ci sono erroi
 
 -  Generale:
 
-1. Mettere logo LongLink al posto del nome
+1. [fatto] Mettere logo LongLink al posto del nome
 2. Mettere logo LL corto al posto del favicon
 3. [fatto] Dare titoli alle pagine
 
@@ -39,7 +39,7 @@ e controllare che non ci sono erroi
 
 1. Pensare a che grafica far fare a cla
 2. [fatto] Modificare backgound
-3. [ci pensa bongo] Ripenare frasi
+3. [ci pensa bongo] Ripensare frasi
 
 -   News:
 
@@ -73,7 +73,7 @@ e controllare che non ci sono erroi
 ## Media
 Per settare il css a media, usare.
 ```css
-@media (max-width: 1000px) {}
+@media (max-width: 900px) {}
 ```
 
 Per effettuare development, usare l'editor per telefoni di google

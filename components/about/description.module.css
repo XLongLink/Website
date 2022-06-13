@@ -32,7 +32,7 @@
     Phone css
 */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .p {
         max-width: 80vw;
         font-size: 28px;
