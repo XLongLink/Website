@@ -18,17 +18,17 @@ function Footbar() {
     return (
         <div className={styles.footbar}>
             <hr className={styles.hr} />
-            <Box 
+            <Box
                 className={styles.linkbox}
             >
-                <Discord url="https://discord.gg/cePXZtT8tz" className={styles.icon} sx={{fontSize: ["3rem","3rem","2rem","2rem","2rem"]}} />
-                <Facebook url="https://www.facebook.com/profile.php?id=100081241820430" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/>
-                <GitHub url="https://github.com/XLongLink" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/>
-                <Instagram url="https://www.instagram.com/xlonglink/" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/>
-                <Linkedin url="https://www.linkedin.com/company/longlink/" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/>
-                {/* <Telegram url="/" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/> */}
-                <Twitter url="https://twitter.com/xLongLink" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/>
-                <YouTube url="https://www.youtube.com/channel/UCJaljchO8u1iU9ILlij7wsg/featured" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2rem","2rem","2rem"]}}/>
+                <Discord url="https://discord.gg/cePXZtT8tz" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
+                <Facebook url="https://www.facebook.com/profile.php?id=100081241820430" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
+                <GitHub url="https://github.com/XLongLink" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
+                <Instagram url="https://www.instagram.com/xlonglink/" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
+                <Linkedin url="https://www.linkedin.com/company/longlink/" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
+                {/* <Telegram url="/" className={styles.icon} sx={{ fontSize: ["3rem","3rem","2.4rem","2.4rem","2.4rem"]}}/> */}
+                <Twitter url="https://twitter.com/xLongLink" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
+                <YouTube url="https://www.youtube.com/channel/UCJaljchO8u1iU9ILlij7wsg/featured" className={styles.icon} sx={{ fontSize: ["2.4rem"] }} />
             </Box>
 
             <div className={styles.copyright}>
