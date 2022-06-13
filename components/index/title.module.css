@@ -35,7 +35,7 @@
     max-width: 90%;
     padding: auto;
     margin: auto;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -49,6 +49,6 @@
 
 @media (max-width: 1000px) {
     .title_font {
-        font-size: 50px;
+        font-size: min(10vw, 40px);
     }
 }
