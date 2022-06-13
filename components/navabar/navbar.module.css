@@ -1,5 +1,5 @@
 .menu {
-    background: var(--black);
+    background: #3A3A3A;
     color: var(--white);
 }
 
@@ -37,5 +37,12 @@
 
     .appbar {
         height: 120%;
+    }
+
+    .text {
+        font-size: 35px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

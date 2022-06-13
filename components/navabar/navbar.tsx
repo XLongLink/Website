@@ -115,7 +115,7 @@ function NavBar() {
                             onClick={handleCloseNavMenu}
                         >
                             <Link href="/">
-                                <Typography textAlign="center">Home</Typography>
+                                <Typography className={styles.text} textAlign="center">Home</Typography>
                             </Link>
                         </MenuItem>
                         <MenuItem
@@ -123,15 +123,15 @@ function NavBar() {
                             onClick={handleCloseNavMenu}
                         >
                             <Link href="/news">
-                                <Typography textAlign="center">News</Typography>
+                                <Typography className={styles.text} textAlign="center">News</Typography>
                             </Link>
                         </MenuItem>
                         <MenuItem
                             key='Docs'
                             onClick={handleCloseNavMenu}
                         >
-                            <a href="https://xlonglink.github.io/docs/api/props" target="_blank" style={{ all: "unset" }}>
-                                <Typography textAlign="center">Docs</Typography>
+                            <a href="https://xlonglink.github.io/docs/api/props" target="_blank" rel="noreferrer" style={{ all: "unset" }}>
+                                <Typography className={styles.text} textAlign="center">Docs</Typography>
                             </a>
                         </MenuItem>
                         <MenuItem
@@ -139,7 +139,7 @@ function NavBar() {
                             onClick={handleCloseNavMenu}
                         >
                             <Link href="/about">
-                                <Typography textAlign="center">About</Typography>
+                                <Typography className={styles.text} textAlign="center">About</Typography>
                             </Link>
                         </MenuItem>
                     </Menu>
