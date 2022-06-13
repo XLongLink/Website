@@ -47,7 +47,7 @@ function NavBar() {
                     {/* WEBPAGES BUTTONS */}
                     <Box
                         className={styles.box}
-                        sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
+                        sx={{ display: ["none","none","flex","flex","flex"] }}>
                         <Button
                             className={styles.text}
                             key='Home'
@@ -83,7 +83,7 @@ function NavBar() {
                         </Button>
                     </Box>
                     {/* DROPDOWN MENU */}
-                    <Box sx={{ flexGrow: 1, right: 0, position: 'absolute', display: { xs: 'flex', sm: 'flex', md: 'none' } }}>
+                    <Box sx={{ flexGrow: 1, right: 0, position: 'absolute', display: ["flex","flex","none","none","none"] }}>
                         <IconButton
                             aria-controls="menu-appbar"
                             onClick={handleOpenNavMenu}
@@ -103,7 +103,7 @@ function NavBar() {
                                 vertical: 'top',
                                 horizontal: 'right',
                             }}
-                            className={styles.menu}
+                            classes={{paper: styles.menu}}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                         >
@@ -111,6 +111,7 @@ function NavBar() {
                                 key='Home'
                                 href="/"
                                 onClick={handleCloseNavMenu}
+                                className={styles.menuText}
                             >
                                 <Typography textAlign="center">Home</Typography>
                             </MenuItem>
@@ -118,6 +119,7 @@ function NavBar() {
                                 key='News'
                                 href="/news"
                                 onClick={handleCloseNavMenu}
+                                className={styles.menuText}
                             >
                                 <Typography textAlign="center">News</Typography>
                             </MenuItem>
@@ -126,6 +128,7 @@ function NavBar() {
                                 href="https://xlonglink.github.io/docs/api/props"
                                 target="_blank"
                                 onClick={handleCloseNavMenu}
+                                className={styles.menuText}
                             >
                                 <Typography textAlign="center">Docs</Typography>
                             </MenuItem>
@@ -133,6 +136,7 @@ function NavBar() {
                                 key='About'
                                 href="/about"
                                 onClick={handleCloseNavMenu}
+                                className={styles.menuText}
                             >
                                 <Typography textAlign="center">About</Typography>
                             </MenuItem>
@@ -142,7 +146,7 @@ function NavBar() {
 
                     {/* WALLETCONNECT BUTTON */}
                     {/*
-                        <Box sx={{ right: 0, position: 'absolute', display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
+                        <Box sx={{ right: 0, position: 'absolute', display: ["none","none","flex","flex","flex"] }}>
                             <Connect />
                         </Box>
                             */}

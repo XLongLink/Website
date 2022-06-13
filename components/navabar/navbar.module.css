@@ -2,8 +2,13 @@
     background: var(--black);
 }
 
+.menuText{
+    color: var(--white);
+}
+
 .appbar {
     background: var(--black);
+    height: 100%;
 }
 
 .box {
@@ -28,4 +33,8 @@
 }
 
 @media (max-width: 900px) {
+    
+    .appbar{
+        height: 120%;
+    }
 }

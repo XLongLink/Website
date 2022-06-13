@@ -32,7 +32,7 @@ e controllare che non ci sono erroi
 2. Far diventare più spessa x cell
 
 - Footbar
-1. Sistemare x telefono
+1. [fatto]Sistemare x telefono
 -> Centrare LL tecnologies al centro e sotto sempre centrato le icone pi?u grandi e cliccabili
 
 -   Home:
