@@ -1,6 +1,5 @@
 body {
-    padding: 0 !important;
     margin: 0;
-    height: auto;
-    min-width: fit-content;
+    overflow-x: hidden;
+    background-color: black;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image"
+import Link from 'next/link';
 
 import { AppBar, Box, Toolbar, Typography, Container, Button, Menu, IconButton, MenuItem, } from '@mui/material';
 import Connect from "../authenticate/connect";
@@ -47,7 +48,7 @@ function NavBar() {
                     {/* WEBPAGES BUTTONS */}
                     <Box
                         className={styles.box}
-                        sx={{ display: ["none","none","flex","flex","flex"] }}>
+                        sx={{ display: ["none", "none", "flex", "flex", "flex"] }}>
                         <Button
                             className={styles.text}
                             key='Home'
@@ -83,7 +84,7 @@ function NavBar() {
                         </Button>
                     </Box>
                     {/* DROPDOWN MENU */}
-                    <Box sx={{ flexGrow: 1, right: 0, position: 'absolute', display: ["flex","flex","none","none","none"] }}>
+                    <Box sx={{ flexGrow: 1, right: 0, position: 'absolute', display: ["flex", "flex", "none", "none", "none"] }}>
                         <IconButton
                             aria-controls="menu-appbar"
                             onClick={handleOpenNavMenu}
@@ -91,59 +92,57 @@ function NavBar() {
                         >
                             <MenuIcon style={{ fontSize: 50 }} />
                         </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            classes={{paper: styles.menu}}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                        >
-                            <MenuItem
-                                key='Home'
-                                href="/"
-                                onClick={handleCloseNavMenu}
-                                className={styles.menuText}
-                            >
-                                <Typography textAlign="center">Home</Typography>
-                            </MenuItem>
-                            <MenuItem
-                                key='News'
-                                href="/news"
-                                onClick={handleCloseNavMenu}
-                                className={styles.menuText}
-                            >
-                                <Typography textAlign="center">News</Typography>
-                            </MenuItem>
-                            <MenuItem
-                                key='Docs'
-                                href="https://xlonglink.github.io/docs/api/props"
-                                target="_blank"
-                                onClick={handleCloseNavMenu}
-                                className={styles.menuText}
-                            >
-                                <Typography textAlign="center">Docs</Typography>
-                            </MenuItem>
-                            <MenuItem
-                                key='About'
-                                href="/about"
-                                onClick={handleCloseNavMenu}
-                                className={styles.menuText}
-                            >
-                                <Typography textAlign="center">About</Typography>
-                            </MenuItem>
-                        </Menu>
                     </Box>
-
-
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        classes={{ paper: styles.menu }}
+                    >
+                        <MenuItem
+                            className={styles.menu}
+                            key='Home'
+                            onClick={handleCloseNavMenu}
+                        >
+                            <Link href="/">
+                                <Typography textAlign="center">Home</Typography>
+                            </Link>
+                        </MenuItem>
+                        <MenuItem
+                            key='News'
+                            onClick={handleCloseNavMenu}
+                        >
+                            <Link href="/news">
+                                <Typography textAlign="center">News</Typography>
+                            </Link>
+                        </MenuItem>
+                        <MenuItem
+                            key='Docs'
+                            onClick={handleCloseNavMenu}
+                        >
+                            <a href="https://xlonglink.github.io/docs/api/props" target="_blank" style={{ all: "unset" }}>
+                                <Typography textAlign="center">Docs</Typography>
+                            </a>
+                        </MenuItem>
+                        <MenuItem
+                            key='About'
+                            onClick={handleCloseNavMenu}
+                        >
+                            <Link href="/about">
+                                <Typography textAlign="center">About</Typography>
+                            </Link>
+                        </MenuItem>
+                    </Menu>
                     {/* WALLETCONNECT BUTTON */}
                     {/*
                         <Box sx={{ right: 0, position: 'absolute', display: ["none","none","flex","flex","flex"] }}>

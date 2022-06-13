@@ -1,8 +1,9 @@
-.menu{
+.menu {
     background: var(--black);
+    color: var(--white);
 }
 
-.menuText{
+.menuText {
     color: var(--white);
 }
 
@@ -27,14 +28,14 @@
     position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: -20px;
-    height: 90px;
-    width: 250px;
+    margin-left: -10px;
+    height: 60px;
+    width: 180px;
 }
 
 @media (max-width: 900px) {
-    
-    .appbar{
+
+    .appbar {
         height: 120%;
     }
 }

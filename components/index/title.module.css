@@ -31,6 +31,8 @@
 }
 
 .div_grid_title {
+    position: relative;
+    max-width: 90%;
     padding: auto;
     margin: auto;
     font-size: 30px;
@@ -43,4 +45,10 @@
     font-weight: bold;
     text-align: center;
     color: var(--fancywhite);
+}
+
+@media (max-width: 1000px) {
+    .title_font {
+        font-size: 50px;
+    }
 }

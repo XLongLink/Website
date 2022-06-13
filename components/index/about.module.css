@@ -1,5 +1,6 @@
 .div {
     width: 100%;
+    margin: 0;
     height: 60vh;
     background-color: white;
 }
@@ -24,4 +25,10 @@
     padding: auto;
     margin: auto;
     max-width: 400px;
+}
+
+@media (max-width: 1000px) {
+    .title {
+        grid-template-columns: 1fr;
+    }
 }
