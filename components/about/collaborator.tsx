@@ -1,7 +1,8 @@
-import styles from "./collaborator.module.css"
-import Image from 'next/image'
-import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube } from "../icons"
+import styles from "./collaborator.module.css";
+import Image from 'next/image';
+import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube } from "../icons";
 import useWindowSize from "../../customHooks/useWindowSize";
+import Gmail from "../icons/gmail";
 
 /*  Function that display collaborator
     information on the site
@@ -112,9 +113,9 @@ function TextBox(props: any) {
                 {props.social && props.social.youtube !== undefined &&
                     <YouTube url={props.social.youtube} className={styles.icon} />
                 }
-                {/* {props.social && props.social.gmail !== undefined &&
+                {props.social && props.social.gmail !== undefined &&
                     <Gmail url={props.social.gmail} className={styles.icon} />
-                } */}
+                }
             </div>
         </div>
 
