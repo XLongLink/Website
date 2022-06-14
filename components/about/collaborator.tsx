@@ -18,6 +18,7 @@ import useWindowSize from "../../customHooks/useWindowSize";
         - telegram[url]: collaborator telegram account
         - twitter[url]: collaborator twitter account
         - youtube[url]: collaborator youtube account
+        - gmail[url]: collaborator gmail account
 */
 
 export interface Person {
@@ -33,7 +34,8 @@ export interface Person {
         telegram?: string;
         linkedin?: string;
         facebook?: string;
-        twitter?: string
+        twitter?: string;
+        gmail?: string;
     }
 }
 
@@ -43,7 +45,7 @@ function CollaboratorBox(props: any) {
     return (
         <div className={styles.collaboratorBox}>
             {
-                width > 1000 ? (
+                width > 900 ? (
                     <>
                         {
                             props.utenti.map((element: Person, index: number) => {
@@ -110,6 +112,9 @@ function TextBox(props: any) {
                 {props.social && props.social.youtube !== undefined &&
                     <YouTube url={props.social.youtube} className={styles.icon} />
                 }
+                {/* {props.social && props.social.gmail !== undefined &&
+                    <Gmail url={props.social.gmail} className={styles.icon} />
+                } */}
             </div>
         </div>
 

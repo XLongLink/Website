@@ -24,6 +24,7 @@ const utenti: Array<Person> = [
         role: "Developer",
         social: {
             github: "https://github.com/sau1707",
+            gmail: "adriano@saurwein.ch",
         }
     }, {
         name: "Leo",
