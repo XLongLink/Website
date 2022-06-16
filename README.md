@@ -87,4 +87,5 @@ const { token, setToken } = useContext(Storage);
 ```
 
 token can be used like state
+
 setToken set the token in localstorage("authToken")
