@@ -39,9 +39,9 @@ function Gmail(props: any) {
             <Snackbar
                 open={open}
                 onClose={() => setOpen(false)}
-                autoHideDuration={2000}
+                autoHideDuration={3000}
             >
-                <Alert severity="success" sx={{background: "#191919"}}> Copyed to clipboard </Alert>
+                <Alert severity="success"> Copyed to clipboard </Alert>
             </Snackbar>
         </>
     );
