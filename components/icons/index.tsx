@@ -6,5 +6,6 @@ import Telegram from "./telegram";
 import Linkedin from "./linkedin";
 import Twitter from "./twitter";
 import YouTube from "./youtube";
+import Gmail from "./gmail";
 
-export { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube }
+export { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube, Gmail }

@@ -1,8 +1,7 @@
 import styles from "./collaborator.module.css";
 import Image from 'next/image';
-import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube } from "../icons";
+import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube, Gmail } from "../icons";
 import useWindowSize from "../../customHooks/useWindowSize";
-import Gmail from "../icons/gmail";
 
 /*  Function that display collaborator
     information on the site

@@ -16,6 +16,7 @@ const utenti: Array<Person> = [
         role: "Founder & Developer ",
         social: {
             github: "https://github.com/sau1707",
+            gmail: "leonardo@saurwein.ch",
         }
     }, {
         name: "Adriano",
@@ -23,8 +24,9 @@ const utenti: Array<Person> = [
         image: "adri.jpg",
         role: "Developer",
         social: {
-            github: "https://github.com/sau1707",
+            github: "https://github.com/Nano042101",
             gmail: "adriano@saurwein.ch",
+            instagram: "https://www.instagram.com/adri_sau/",
         }
     }, {
         name: "Leo",
