@@ -59,17 +59,11 @@ e controllare che non ci sono erroi
 
 1. [fatto] Aumentare dimensione icone
 2. [fatto] Creare feedback quando user entra con mouse
-3. Impostare link ad icone con \_blank
-
--   Dashboard:
-
-1. Creare base dashboard dove developers possono sperimentare con la demo.
-   La demo di LL sarà 1 solo server dove tutti possono modificare dati per sperimentare
+3. [fatto] Impostare link ad icone con \_blank
 
 - Icone:
 1. [fatto] Aggiunto sotto ./icons
-2. Aggiungere url in props che si apre in _black
-3. Aggiungere size in props che determina la grandezza
+2. [fatto] Aggiungere url in props che si apre in _black
 
 ## Media
 Per settare il css a media, usare.
