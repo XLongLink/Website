@@ -70,13 +70,15 @@ function CollaboratorBox(props: any) {
 function FotoBox(props: any) {
     return (
         <div className={styles.imagediv}>
-            <Image src={`/about/${props.url}`}
+            <Image 
+                src={`/about/${props.url}`}
                 width="100%"
                 height="100%"
                 quality="100"
                 alt={props.url}
                 layout="responsive"
-                unoptimized={true} />
+                unoptimized={true} 
+            />
         </div>
     )
 }
@@ -124,15 +126,19 @@ function Collaborator(props: any) {
     return (
         <div className={styles.div}>
             <div className={styles.boxdimens} >
-                {props.flip ? (
-                    <>
-                        <FotoBox url={props.image} />
-                        <TextBox {...props} />
-                    </>) : (
-                    <>
-                        <TextBox {...props} />
-                        <FotoBox url={props.image} />
-                    </>)}
+                {
+                    props.flip ? (
+                        <>
+                            <FotoBox url={props.image} />
+                            <TextBox {...props} />
+                        </>
+                    ) : (
+                        <>
+                            <TextBox {...props} />
+                            <FotoBox url={props.image} />
+                        </>
+                    )
+                }
             </div>
         </div >
     )

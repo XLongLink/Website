@@ -1,7 +1,47 @@
 import { useState } from "react"
 import Box from '@mui/material/Box';
 import styles from "./switch.module.css"
-import Features from "./features";
+import Features, { Feature } from "./features";
+
+const User: Array<Feature> = [
+    {
+        title: "Standards",
+        description: "Used on multiple applications makes the experience much more interconnected",
+        image: "",
+    },{
+        title: "Safety",
+        description: "Work with the comunity to check application security and avoid scam",
+        image: "",
+    },{
+        title: "Data control",
+        description: "View your activities, check your data",
+        image: "",
+    },{
+        title: "Discover",
+        description: "New applications created with LongLink",
+        image: "",
+    }
+]
+
+const Developer: Array<Feature> = [
+    {
+        title: "Login & Authentication",
+        description: "According to ARC-0014 standard with a single line of code",
+        image: "",
+    },{
+        title: "Longstorage",
+        description: "An off-chain database to save user preferences",
+        image: "",
+    },{
+        title: "User management",
+        description: "Thanks to data and statistics visible in the dashboard",
+        image: "",
+    },{
+        title: "With 1 single line of code",
+        description: "Access user assets, send any token or nft, call a smart contract and much more",
+        image: "",
+    }
+]
 
 function Switch() {
     const [active, setActive] = useState(false);
@@ -30,67 +70,9 @@ function Switch() {
             </Box >
             {active ?
                 <>
-                    <Features
-                        side="left"
-                        title="Standards"
-                        line_1="used on multiple applications "
-                        line_2="makes the experience "
-                        line_3="much more interconnected"
-                    />
-                    <Features
-                        side="right"
-                        title="Safety"
-                        line_1="work with the comunity"
-                        line_2="to check application security"
-                        line_3="and avoid scam"
-                    />
-                    <Features
-                        side="left"
-                        title="Data cotrol"
-                        line_1="View your activities"
-                        line_2="Check your data"
-                        line_3=""
-                        line_4=""
-                    />
-                    <Features
-                        side="right"
-                        title="Discover"
-                        line_1="new applications"
-                        line_2="created with LongLink"
-                        line_3=""
-                        line_4=""
-                    />
+                    <Features features={User} />
                 </> : <>
-                    <Features
-                        side="left"
-                        title="Login & Authentication"
-                        line_1="According to ARC-0014 standard"
-                        line_2="with a single line of code"
-                        line_3=""
-                    />
-                    <Features
-                        side="right"
-                        title="Longstorage"
-                        line_1="An off-chain database"
-                        line_2="to save user preferences"
-                        line_3=""
-                        line_4=""
-                    />
-                    <Features
-                        side="left"
-                        title="Users management"
-                        line_1="Thanks to data and statistics"
-                        line_2="visible in the dashboard"
-                        line_3=""
-                    />
-                    <Features
-                        side="right"
-                        title="With 1 single line of code"
-                        line_1="- access user assets"
-                        line_2="- send any token or nft"
-                        line_3="- call a smart contract"
-                        line_4="... and much more"
-                    />
+                    <Features features={Developer} />
                 </>
             }
         </div>
