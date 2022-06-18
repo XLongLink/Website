@@ -27,13 +27,13 @@ e controllare che non ci sono erroi
 3. [fatto] Dare titoli alle pagine
 
 - Appbar
-1. Creare menù x telefono (copiare codice da sito babbo)
+1. [fatto]Creare menù x telefono (copiare codice da sito babbo)
 -> x ora Togliere bottone login da app
-2. Far diventare più spessa x cell
+2. [fatto]Far diventare più spessa x cell
 
 - Footbar
 1. [fatto]Sistemare x telefono
--> Centrare LL tecnologies al centro e sotto sempre centrato le icone pi?u grandi e cliccabili
+-> Centrare LL tecnologies al centro e sotto sempre centrato le icone più grandi e cliccabili
 
 -   Home:
 
@@ -57,7 +57,7 @@ e controllare che non ci sono erroi
 -   About:
 
 1. [fatto] Aumentare dimensione icone
-2. Creare feedback quando user entra con mouse
+2. [fatto] Creare feedback quando user entra con mouse
 3. Impostare link ad icone con \_blank
 
 -   Dashboard:

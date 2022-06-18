@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from "./collaborator.module.css";
 import Image from 'next/image';
 import { Discord, Facebook, GitHub, Instagram, Telegram, Linkedin, Twitter, YouTube, Gmail } from "../icons";
@@ -68,8 +69,16 @@ function CollaboratorBox(props: any) {
 }
 
 function FotoBox(props: any) {
+    const [isHovering, setIsHovered] = useState(false);
+    const onMouseEnter = () => setIsHovered(true);
+    const onMouseLeave = () => setIsHovered(false);
     return (
-        <div className={styles.imagediv}>
+        <div 
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            className={styles.imagediv}
+        >
+            
             <Image 
                 src={`/about/${props.url}`}
                 width="100%"
@@ -77,7 +86,8 @@ function FotoBox(props: any) {
                 quality="100"
                 alt={props.url}
                 layout="responsive"
-                unoptimized={true} 
+                unoptimized={true}
+                style={{ "transform": isHovering ? "scale(1.25)" : "scale(1)" }}
             />
         </div>
     )

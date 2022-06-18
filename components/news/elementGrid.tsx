@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Element from "./element";
-import styles from "./elementGrid.module.css"
+import styles from "./elementGrid.module.css";
 /*
     STYLE
 */
