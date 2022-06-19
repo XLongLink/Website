@@ -31,6 +31,7 @@ function NavBar() {
             <Container maxWidth={false}>
                 <Toolbar>
                     {/* LOGO */}
+
                     <Typography
                         variant="h6"
                         noWrap
@@ -45,7 +46,9 @@ function NavBar() {
                             />
                         </div>
                     </Typography>
+
                     {/* WEBPAGES BUTTONS */}
+
                     <Box
                         className={styles.box}
                         sx={{ display: ["none", "none", "flex", "flex", "flex"] }}>
@@ -83,7 +86,9 @@ function NavBar() {
                             About
                         </Button>
                     </Box>
+
                     {/* DROPDOWN MENU */}
+
                     <Box sx={{ flexGrow: 1, right: 0, position: 'absolute', display: ["flex", "flex", "none", "none", "none"] }}>
                         <IconButton
                             aria-controls="menu-appbar"
@@ -143,12 +148,12 @@ function NavBar() {
                             </Link>
                         </MenuItem>
                     </Menu>
+
                     {/* WALLETCONNECT BUTTON */}
-                    {/*
-                        <Box sx={{ right: 0, position: 'absolute', display: ["none","none","flex","flex","flex"] }}>
-                            <Connect />
-                        </Box>
-                            */}
+                
+                    {/* <Box sx={{ right: 0, position: 'absolute', display: ["none","none","flex","flex","flex"] }}>
+                        <Connect />
+                    </Box> */}
 
                 </Toolbar>
             </Container>
