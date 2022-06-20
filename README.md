@@ -13,62 +13,44 @@ npm run dev
 ```
 
 Prima di fare push su github
-```bash
-npm run build 
-```
-e controllare che non ci sono erroi
 
+```bash
+npm run build
+```
+
+e controllare che non ci sono erroi
 
 ## To Do list:
 
--  Generale:
-
-1. [fatto] Mettere logo LongLink al posto del nome
-2. Mettere logo LL corto al posto del favicon
-3. [fatto] Dare titoli alle pagine
-
-- Appbar
-1. [fatto]Creare menù x telefono (copiare codice da sito babbo)
--> x ora Togliere bottone login da app
-2. [fatto]Far diventare più spessa x cell
-
-- Footbar
-1. [fatto]Sistemare x telefono
--> Centrare LL tecnologies al centro e sotto sempre centrato le icone più grandi e cliccabili
-
--   Home:
+- Home:
 
 1. Pensare a che grafica far fare a cla
-2. [fatto] Modificare backgound
-3. [ci pensa bongo] Ripensare frasi
+2. [ci pensa bongo] Ripensare frasi
+3. Sezione bianca telefono ridimensionare margine
 
--   News:
+- News:
 
-1. [fatto] Backgound stesso colore di about
-2. Caricare immagini di copertina da ./public/news
-3. Data in copertina
-4. Caricare body e creare demo layout in formato markdown
+1. Caricare immagini di copertina da ./public/news
+2. Data in copertina
+3. Caricare body e creare demo layout in formato markdown
 
--   Docs:
+- Docs:
 
 1. Impostare colori tema scuro come sito LL
 2. Settare il giusto re-indirizamanto quando si clicca il logo github
 3. Fare che di apre con \_blank
 
--   About:
+- About:
 
-1. [fatto] Aumentare dimensione icone
-2. [fatto] Creare feedback quando user entra con mouse
-3. [fatto] Impostare link ad icone con \_blank
-
-- Icone:
-1. [fatto] Aggiunto sotto ./icons
-2. [fatto] Aggiungere url in props che si apre in _black
+1. Sistemare link icone
 
 ## Media
+
 Per settare il css a media, usare.
+
 ```css
-@media (max-width: 900px) {}
+@media (max-width: 900px) {
+}
 ```
 
 Per effettuare development, usare l'editor per telefoni di google
