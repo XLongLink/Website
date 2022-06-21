@@ -1,95 +1,94 @@
 .footbar {
-    width: 100%;
-    display: flex;
-    position: relative;
-    bottom: 0;
-    background: black;
-    height: 100px;
-    box-sizing: border-box;
-    margin-top: .10px;
-    margin: 0;
+	width: 100%;
+	display: flex;
+	position: relative;
+	bottom: 0;
+	background: black;
+	height: 100px;
+	box-sizing: border-box;
+	margin-top: 0.1px;
+	margin: 0;
 }
 
 .logoIcon {
-    color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 100px;
+	color: white;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 100px;
 }
 
 .logo {
-    color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 2px;
+	color: white;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 2px;
 }
 
 .icon {
-    position: relative;
-    font-size: 2rem;
-    margin: auto;
-    padding: 5px;
+	position: relative;
+	font-size: 2rem;
+	margin: auto;
+	padding: 5px;
 }
 
 .linkbox {
-    position: absolute;
-    right: 100px;
-    top: 50%;
-    transform: translateY(-50%);
+	position: absolute;
+	right: 100px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .copyright {
-    display: flex;
+	display: flex;
 }
 
 .hr {
-    display: none;
+	display: none;
 }
 
 @media (max-width: 900px) {
+	.footbar {
+		display: block;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		height: fit-content;
+		margin: auto;
+	}
 
-    .footbar {
-        display: block;
-        padding-top: 40px;
-        padding-bottom: 20px;
-        height: fit-content;
-        margin: auto;
-    }
+	.linkbox {
+		position: inherit;
+		margin: auto;
+		width: fit-content;
+		height: auto;
+		padding-bottom: 20px;
+		right: 0;
+		top: 0;
+		transform: translateY(0);
+	}
 
-    .linkbox {
-        position: inherit;
-        margin: auto;
-        width: fit-content;
-        height: auto;
-        padding-bottom: 20px;
-        right: 0;
-        top: 0;
-        transform: translateY(0)
-    }
+	.logoIcon {
+		margin-left: auto;
+	}
 
-    .logoIcon {
-        margin-left: auto;
-    }
+	.icon {
+		font-size: 2rem;
+		padding: 0;
+		margin: 2px;
+	}
 
-    .icon {
-        font-size: 2rem;
-        padding: 0;
-        margin: 2px;
-    }
+	.copyright {
+		margin: auto;
+		width: fit-content;
+		margin-bottom: 20px;
+	}
 
-    .copyright {
-        margin: auto;
-        width: fit-content;
-        margin-bottom: 20px;
-    }
-
-    .hr {
-        display: block;
-        position: inherit;
-        max-width: 80%;
-        margin-top: 0;
-        margin-bottom: 20px;
-        margin-top: 0;
-        box-sizing: border-box;
-    }
+	.hr {
+		display: block;
+		position: inherit;
+		max-width: 80%;
+		margin-top: 0;
+		margin-bottom: 20px;
+		margin-top: 0;
+		box-sizing: border-box;
+	}
 }
