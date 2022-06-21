@@ -66,3 +66,22 @@ const { token, setToken } = useContext(Storage);
 token can be used like state
 
 setToken set the token in localstorage("authToken")
+
+## Elemento news
+
+per creare un nuovo elemento basta scrivere un file markdown nella sezione articles
+che deve contenere un titolo, la data, un immagine che va messa nella sezione public/news, la dimensione dell'immagine che verrà visualizzata ed infine la descrizione che si vuole fare vedere quando si clicca sopra.
+Dovrà uscira una roba del genere:
+```mdx
+---
+title: "titolo"
+date: "data"
+image: "immagine.png"
+size: "1x2" 
+---
+
+## Descrizione immagine
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget urna ut dui pretium scelerisque. Donec ac leo at elit scelerisque elementum. Quisque sit amet rhoncus neque. Quisque vehicula ut nisl in imperdiet. Nam ac elit sit amet leo varius iaculis. Curabitur eros risus, sagittis id nulla et, pellentesque finibus turpis. Sed convallis magna dui, at aliquet ex rutrum in. Mauris ut velit eros. Sed nec leo ex. Morbi sed erat id enim mollis egestas. Donec rutrum diam vitae aliquet pellentesque. Vivamus efficitur volutpat orci quis luctus. Vestibulum quis tellus elit.
+
+```
