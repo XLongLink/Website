@@ -1,98 +1,98 @@
 .collaboratorBox {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
 }
 
 .div {
-    padding: 0;
-    flex: 0 0 50%;
-    max-width: 50%;
-    position: relative;
-    aspect-ratio: 2 / 1;
+	padding: 0;
+	flex: 0 0 50%;
+	max-width: 50%;
+	position: relative;
+	aspect-ratio: 2 / 1;
 }
 
 .boxdimens {
-    height: 100% !important;
-    width: 100% !important;
-    display: flex;
-    flex-wrap: wrap;
+	height: 100% !important;
+	width: 100% !important;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .imagediv {
-    width: 50%;
-    overflow: hidden;
+	width: 50%;
+	overflow: hidden;
 }
-
 
 .image {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
 }
-
 
 .description {
-    width: 50%;
-    aspect-ratio: 1;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    word-wrap: break-word;
-    padding: 0;
-    margin: 0;
-    background-color: var(--background);
-    color: aliceblue;
+	width: 50%;
+	aspect-ratio: 1;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	word-wrap: break-word;
+	padding: 0;
+	margin: 0;
+	background-color: var(--background);
+	color: aliceblue;
 }
 
-
 .icon {
-    border: 1px;
-    padding: 7px;
-    margin: 0;
+	border: 1px;
+	padding: 7px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	position: relative;
+	transform: scale(1.5);
 }
 
 .iconDiv {
-    width: fit-content;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    padding: auto;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-
+	width: fit-content;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	padding: auto;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .name {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: min(4vw, 28px);
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: min(4vw, 28px);
 }
 
 .desc {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: min(3vw, 20px);
+	margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: min(3vw, 20px);
 }
 
 .hr {
-    max-width: 50%;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    height: 1px;
-    background-color: white;
-    transform: translate(50%, 0);
+	max-width: 50%;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	height: 1px;
+	background-color: white;
+	transform: translate(50%, 0);
 }
 
 @media (max-width: 900px) {
-    .div {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+	.div {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
 }
