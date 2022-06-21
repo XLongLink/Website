@@ -14,7 +14,8 @@ const Home: NextPage = () => {
 				<title> Home</title>
 				<meta charSet='utf-8' />
 				<meta name='description' content='Official LongLink website' />
-				<meta name='robots' content='longlink, xlonglink' />
+				<meta name='author' content='LongLink' />
+				<meta name='keywords' content='longlink, xlonglink' />
 			</Head>
 			<NavBar />
 			<Title />
