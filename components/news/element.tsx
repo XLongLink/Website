@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Modal, Button } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from "./element.module.css"
+import { marked } from "marked";
+import { Modal, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./element.module.css";
+import { News } from "../../interfaces/news";
 
 /*
     https://blog.nrwl.io/read-and-render-md-files-with-next-js-and-nx-89a85c1d9b44
@@ -22,44 +24,42 @@ import styles from "./element.module.css"
     [to do] move feet bar to the bottom
     [to do] create standard for markdown file (font, icons, ecc)
 */
-function Element(props: any) {
-    const [show, setShow] = useState(false);
+function Element(props: News) {
+	const [show, setShow] = useState(false);
 
-    const size = `${props.size} brick ${styles[`s${props.size}`]}`;
+	const size = `${props.size} brick ${styles[`s${props.size}`]}`;
 
-    return (
-        <>
-            <div
-                className={`${size} ${styles.block}`}
-            >
-                <div
-                    className={styles.block}
-                    onClick={() => setShow(true)}
-                >
-                </div>
-            </div>
-            <Modal
-                show={show}
-                onHide={() => setShow(false)} centered
-                size="xl"
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title> {props.title} </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    {props.desc}
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button
-                        variant="outline"
-                        onClick={() => setShow(false)}
-                    >
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
-    )
+	return (
+		<>
+			<div className={`${size} ${styles.block}`}>
+				<div
+					className={styles.block}
+					onClick={() => setShow(true)}
+				></div>
+			</div>
+			<Modal
+				className={styles.modalModal}
+				show={show}
+				onHide={() => setShow(false)}
+				centered
+				size='xl'
+			>
+				<Modal.Header closeButton>
+					<Modal.Title> {props.title} </Modal.Title>
+				</Modal.Header>
+				<Modal.Body className={styles.modalBody}>
+					<div
+						dangerouslySetInnerHTML={{ __html: marked(props.body) }}
+					/>
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant='outline' onClick={() => setShow(false)}>
+						Close
+					</Button>
+				</Modal.Footer>
+			</Modal>
+		</>
+	);
 }
 
-export default Element
+export default Element;

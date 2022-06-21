@@ -5,8 +5,11 @@ import Footbar from "../components/footbar/footbar";
 import ElementGrid from "../components/news/elementGrid";
 import Head from "next/head";
 
-const NewsPage: NextPage = (props: any) => {
-	console.log(props);
+interface NewsProps {
+	news: Array<News>;
+}
+
+const NewsPage: NextPage<NewsProps> = (props) => {
 	return (
 		<>
 			<Head>
@@ -14,7 +17,7 @@ const NewsPage: NextPage = (props: any) => {
 			</Head>
 			<BodyStyle background='#191919' />
 			<NavBar />
-			<ElementGrid />
+			<ElementGrid news={props.news} />
 			<Footbar />
 		</>
 	);
@@ -22,7 +25,7 @@ const NewsPage: NextPage = (props: any) => {
 export default NewsPage;
 
 import fs from "fs";
-import path, { join } from "path";
+import { join } from "path";
 import matter from "gray-matter";
 import { News } from "../interfaces/news";
 
