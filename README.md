@@ -22,11 +22,15 @@ e controllare che non ci sono erroi
 
 ## To Do list:
 
+- Navbar:
+
+1. [fatto] Diminuire dimensioni menu in modalità telefono
+
 - Home:
 
 1. Pensare a che grafica far fare a cla
 2. [ci pensa bongo] Ripensare frasi
-3. Sezione bianca telefono ridimensionare margine
+3. [fatto] Sezione bianca telefono ridimensionare margine
 
 - News:
 
