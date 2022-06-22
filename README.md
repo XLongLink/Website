@@ -34,9 +34,9 @@ e controllare che non ci sono erroi
 
 - News:
 
-1. Caricare immagini di copertina da ./public/news
+1. [fatto] Caricare immagini di copertina da ./public/news
 2. Data in copertina
-3. Caricare body e creare demo layout in formato markdown
+3. [fatto] Caricare body e creare demo layout in formato markdown
 
 - Docs:
 
@@ -46,7 +46,7 @@ e controllare che non ci sono erroi
 
 - About:
 
-1. Sistemare link icone
+1. Sistemare grandezza icone
 
 ## Media
 
