@@ -82,6 +82,6 @@ size: "1x2"
 
 ## Descrizione immagine
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget urna ut dui pretium scelerisque. Donec ac leo at elit scelerisque elementum. Quisque sit amet rhoncus neque. Quisque vehicula ut nisl in imperdiet. Nam ac elit sit amet leo varius iaculis. Curabitur eros risus, sagittis id nulla et, pellentesque finibus turpis. Sed convallis magna dui, at aliquet ex rutrum in. Mauris ut velit eros. Sed nec leo ex. Morbi sed erat id enim mollis egestas. Donec rutrum diam vitae aliquet pellentesque. Vivamus efficitur volutpat orci quis luctus. Vestibulum quis tellus elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget urna ut dui pretium scelerisque. Donec ac leo at elit scelerisque elementum. Quisque sit amet rhoncus neque.
 
 ```
