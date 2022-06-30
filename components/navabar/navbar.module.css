@@ -40,9 +40,18 @@
     }
 
     .text {
-        font-size: 35px;
+        font-size: 25px;
         padding: 5px;
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+@media (max-width: 500px) {
+    .text {
+            font-size: 20px;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 }

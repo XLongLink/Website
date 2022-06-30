@@ -4,6 +4,8 @@ import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./element.module.css";
 import { News } from "../../interfaces/news";
+import Image from 'next/image';
+
 
 /*
     https://blog.nrwl.io/read-and-render-md-files-with-next-js-and-nx-89a85c1d9b44
@@ -29,13 +31,19 @@ function Element(props: News) {
 
 	const size = `${props.size} brick ${styles[`s${props.size}`]}`;
 
+	// components\news\element.tsx
+	// public\news\primo.png
+
 	return (
 		<>
 			<div className={`${size} ${styles.block}`}>
-				<div
+				<Image
+					src={`/news/${props.image}`}
+					layout="fill"
+					objectFit="cover"
 					className={styles.block}
 					onClick={() => setShow(true)}
-				></div>
+				/>
 			</div>
 			<Modal
 				className={styles.modalModal}

@@ -3,10 +3,7 @@
 }
 
 .block {
-	height: 100%;
-	width: 100%;
-	background-image: url("https://www.lbv.de/assets/images/7/Wolf-auf-Baumstamm-Marcus-Bosch-b7a48d01.jpg");
-	background-size: cover;
+	
 }
 
 .block:hover {
